@@ -5,60 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets - Lucas Couraudon</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-
 <nav class="navbar">
-    <div><a href="index.html">Lucas Couraudon</a></div>
+    <a href="index.html" class="logo"><i class="fas fa-code" style="margin-right: 8px;"></i> LUCAS COURAUDON</a>
     <div>
-        <a href="projets.html">Projets</a>
-        <a href="parcours.html">Mon Parcours</a>
+        <a href="projets.html"><i class="fas fa-project-diagram"></i> Projets</a>
+        <a href="parcours.html"><i class="fas fa-graduation-cap"></i> Mon Parcours</a>
+        <a href="mailto:couraudonlucas01@gmail.com"><i class="fas fa-envelope"></i> Contact</a>
     </div>
 </nav>
 
 <section>
-    <h1>Mes Réalisations Informatiques</h1>
-    <p>Découvrez une sélection de mes projets, conçus pour appliquer les méthodes de développement et les technologies acquises durant mon BUT Informatique.</p>
+    <h1>Mes Réalisations Techniques</h1>
+    <p style="color: var(--text-muted); margin-bottom: 40px;">Chaque projet représente un défi que j'ai relevé. Découvrez mes réalisations concrètes en programmation et gestion.</p>
 
-    <div class="project-card">
-        <h3>Conception d'un jeu de gestion en Java</h3>
-        <div class="badges">
-            <span class="badge">Java</span>
-            <span class="badge">JavaFX</span>
-            <span class="badge">POO / Algorithmique</span>
-        </div>
-        <p>Ce projet majeur a consisté à développer un jeu complet, ce qui a solidifié ma maîtrise de la Programmation Orientée Objet (POO) et de la création d'interfaces graphiques (GUI) avec JavaFX.</p>
-        <p><strong>Rôle :</strong> Développeur principal. **Compétences clés :** Logique complexe, gestion des classes et des événements.</p>
-        <a href="#" class="cta-button" style="background-color: #333;">Voir le Code Source (Git)</a>
-    </div>
+    <div class="project-grid">
 
-    <div class="project-card">
-        <h3>Développement d'un site web pour l'écomobilité </h3>
-        <div class="badges">
-            <span class="badge">HTML/CSS</span>
-            <span class="badge">SQL</span>
-            <span class="badge">PostgreSQL </span>
+        <div class="project-card">
+            <h3>Jeu de Gestion en Java 🎮</h3>
+            <div class="badges">
+                <span class="badge"><i class="fab fa-java"></i> Java</span>
+                <span class="badge">JavaFX</span>
+                <span class="badge">POO / Algorithmique</span>
+            </div>
+            <p>Je suis particulièrement fier d'avoir mené à bien ce projet ambitieux : la <strong>conception complète d'un jeu de gestion</strong> où l'optimisation des ressources est au cœur du gameplay. Ce fut un défi majeur pour structurer l'interface graphique (GUI) et implémenter une logique de jeu fiable.</p>
+            <p>Ce succès a solidifié ma maîtrise de la <strong>Programmation Orientée Objet (POO)</strong> et m'a permis d'affûter ma <strong>capacité à résoudre des problèmes d'algorithmique complexe</strong> sous contrainte de performance. </p>
+            <a href="#" class="cta-button"><i class="fas fa-file-code"></i> Code Source (Git)</a>
         </div>
-        <p>Création d'une plateforme web complète intégrant une base de données pour gérer les informations d'écomobilité. Ce projet met en évidence mes compétences en développement Full-Stack et en interaction avec des bases de données relationnelles.</p>
-        <p><strong>Compétences clés :</strong> Interface utilisateur (UI), requête SQL, modélisation de données.</p>
-        <a href="#" class="cta-button" style="background-color: #333;">Accéder au Site (Démo)</a>
-    </div>
 
-    <div class="project-card">
-        <h3>Projet : Jeu de casino utilisant la méthode agile </h3>
-        <div class="badges">
-            <span class="badge">Méthode Agile</span>
-            <span class="badge">Travail en Équipe </span>
-            <span class="badge">Gestion de Projet </span>
+        <div class="project-card">
+            <h3>Plateforme Web Écomobilité 🌐</h3>
+            <div class="badges">
+                <span class="badge"><i class="fab fa-html5"></i> HTML5</span>
+                <span class="badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+                <span class="badge"><i class="fas fa-database"></i> SQL</span>
+                <span class="badge">PostgreSQL</span>
+            </div>
+            <p>Ma plus grande satisfaction sur ce projet est d'avoir réussi à créer une <strong>plateforme web Full-Stack fonctionnelle</strong> dédiée à l'écomobilité, gérant l'expérience utilisateur (Front-End) et la persistance des données (Back-End). J'ai conçu l'architecture de la base de données et l'interface de A à Z.</p>
+            <p>La réussite de cette intégration prouve mon expertise dans la modélisation de données (SQL) et l'utilisation des technologies web modernes pour livrer des solutions <strong>autonomes et sécurisées</strong>.</p>
+            <a href="SiteEcoMobilite/xiaomi-ecomobilite-main/Site/connexion.html" target="_blank" class="cta-button"><i class="fas fa-external-link-alt"></i> Accéder au Site</a>
         </div>
-        <p>Ce projet a été l'occasion d'appliquer concrètement la méthode agile, en gérant le développement par sprints.Il a renforcé mes capacités de planification, de communication et de gestion des priorités[cite: 7].</p>
-        <p><strong>Compétences clés :</strong> Gestion des délais , Réactivité , Travail en équipe efficace.</p>
+
+        <div class="project-card">
+            <h3>Gestion de Projet (Jeu de Casino) 🧑‍💻</h3>
+            <div class="badges">
+                <span class="badge">Méthode Agile</span>
+                <span class="badge"><i class="fab fa-git-alt"></i> Gestion de Versions</span>
+                <span class="badge">Travail en Équipe</span>
+            </div>
+            <p>Ce projet m'a permis de diriger la réalisation d'un jeu de casino en appliquant rigoureusement la <strong>méthode agile (Scrum)</strong>. J'ai orchestré les sprints, géré les user stories et maintenu la <strong>coordination de l'équipe</strong> pour livrer un produit complet dans un temps imparti. C'est la gestion d'équipe qui m'a le plus motivé.</p>
+            <p>Ce contexte m'a appris l'importance d'une <strong>communication claire</strong> et d'une <strong>capacité d'organisation</strong> sans faille, consolidant ma <strong>réactivité</strong> face aux contraintes de temps et de production.</p>
+            <a href="#" class="cta-button"><i class="fas fa-info-circle"></i> Détails du Processus</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Programmation Système C & Environnement Linux ⚙️</h3>
+            <div class="badges">
+                <span class="badge"><i class="fas fa-c"></i> C</span>
+                <span class="badge"><i class="fab fa-linux"></i> Linux</span>
+                <span class="badge">Administration Système</span>
+            </div>
+            <p>J'ai été passionné par l'opportunité de plonger dans les fondations de la programmation en implémentant des structures de données et des algorithmes bas niveau en langage <strong>C</strong>. Travailler exclusivement en environnement <strong>Linux</strong> m'a forcé à maîtriser la ligne de commande et les mécanismes de compilation système.</p>
+            <p>Ce travail sur les systèmes m'a apporté une <strong>compréhension approfondie des concepts de la mémoire et des processus</strong>, compétences fondamentales pour optimiser la performance et l'efficacité de n'importe quelle application.</p>
+            <a href="#" class="cta-button"><i class="fas fa-laptop-code"></i> Détails Techniques</a>
+        </div>
+
     </div>
 
 </section>
 
 <footer>
-    <p>&copy; 2025 Lucas Couradon | Email : <a href="mailto:couraudonlucas01@gmail.com">couraudonlucas01@gmail.com </a> | Tél : 06.98.41.31.56</p>
+    <p>
+        <strong>Contactez-moi</strong> :
+        <a href="mailto:couraudonlucas01@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        |
+        <a href="https://www.linkedin.com/in/lucas-couraudon-b217b035a/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </p>
 </footer>
 </body>
 </html>

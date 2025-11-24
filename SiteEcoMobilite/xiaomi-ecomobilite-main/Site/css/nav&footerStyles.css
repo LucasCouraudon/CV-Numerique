@@ -1,0 +1,240 @@
+:root {
+    /* Couleurs Xiaomi/Design */
+    --primary-color: #ff6900; /* Orange vif */
+    --secondary-color: #191919; /* Noir pour le fond de footer */
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --text-muted: #696969;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../font/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url(../font/Roboto-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* --- NAV BAR --- */
+
+nav menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    max-width: 1400px; /* Largeur de contenu max */
+    margin: 0 auto;
+}
+
+nav {
+    overflow: hidden;
+    background-color: var(--text-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+nav menu ul li {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+nav menu ul li:not(.deconnexion) {
+    border-bottom: 3px solid transparent;
+}
+
+nav menu ul li.deconnexion {
+    margin-left: auto;
+}
+
+nav menu ul li a {
+    display: block;
+    color: var(--text-dark);
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+nav menu ul li:hover:not(.deconnexion) a {
+    color: var(--primary-color);
+}
+
+nav menu ul li:hover:not(.deconnexion) {
+    border-bottom: 3px solid var(--primary-color);
+}
+
+nav menu ul li.deconnexion a {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    color: var(--text-light);
+    padding: 8px 20px;
+    transition: background-color 0.2s;
+}
+
+nav menu ul li.deconnexion:hover a {
+    background-color: #e55c00;
+}
+
+nav menu ul li.deconnexion:hover {
+    border-bottom: 3px solid transparent;
+}
+
+/* Masquer les liens Boutique et Déconnexion sur les petits écrans pour plus de lisibilité */
+@media (max-width: 600px) {
+    nav menu ul li:nth-child(2) {
+        display: none;
+    }
+    nav menu ul li.deconnexion {
+        margin-left: 10px;
+    }
+}
+
+
+/* --- FOOTER --- */
+
+footer {
+    padding: 40px 20px 10px;
+    background-color: var(--secondary-color);
+    /* S'assurer que le footer couvre toute la largeur */
+    width: 100%;
+}
+
+footer section.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1400px;
+    margin: 0 auto 20px;
+}
+
+footer section.footer-container section {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    min-width: 150px;
+}
+
+footer section.item h2 {
+    color: var(--text-light);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: "Roboto-Bold", sans-serif;
+}
+
+footer section.item a {
+    color: var(--text-muted);
+    margin: 3px 0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+footer section.item a:hover {
+    color: var(--text-light);
+    text-decoration: underline;
+}
+
+/* Suivez-nous / Réseaux Sociaux */
+footer section.resaux {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+footer section.resaux svg {
+    color: var(--text-muted);
+    width: 20px;
+    height: 20px;
+    transition: color 0.2s;
+}
+
+footer section.resaux a:hover svg {
+    color: var(--text-light);
+}
+
+/* Newsletter */
+footer section.footer-container form label {
+    color: var(--text-muted);
+    font-size: 14px;
+    text-align: left;
+}
+
+footer section.footer-container form div {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid var(--text-muted);
+    border-radius: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+footer section.footer-container form div input[type="email"] {
+    flex-grow: 1;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+}
+
+footer section.footer-container form div input[type="submit"] {
+    background-color: var(--text-muted);
+    color: var(--text-dark);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+footer section.footer-container form div input[type="submit"]:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+footer section.copyright {
+    border-top: 1px solid var(--text-muted);
+    color: var(--text-muted);
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* Réactivité Footer */
+@media (max-width: 768px) {
+    footer section.footer-container {
+        justify-content: flex-start;
+    }
+    footer section.footer-container section {
+        width: 40%;
+        min-width: unset;
+        margin: 10px;
+    }
+    footer section.item:nth-child(4) { /* À propos de nous */
+        order: 5;
+    }
+    footer section.item:nth-child(5) { /* Suivez-nous */
+        order: 4;
+    }
+}

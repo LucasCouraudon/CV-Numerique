@@ -1,0 +1,174 @@
+:root {
+    --primary-color: #ff6900;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --secondary-orange: rgb(187, 114, 30); /* Ancien orange */
+    --hover-orange: #e55c00;
+}
+/* Les styles * globaux sont déjà dans nav&footerStyles.css */
+
+main {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* CORRECTION : Assurer que main s'étend sur toute la largeur */
+    width: 100%;
+}
+
+/* --- HEADER / FORMULAIRE DE RECHERCHE --- */
+main header{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    width: 100%;
+    background-image: url(../img/Sevicecovoiturage2.jpg);
+    background-size: cover; /* CHANGEMENT à cover pour remplir l'espace */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: var(--primary-color);
+    height: 400px;
+    border-bottom: 1px solid #000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+main header h1{
+    color: var(--text-light);
+    font-family: "Roboto-Bold", sans-serif;
+    margin: 5px;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+main header form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+main header form select,
+main header form input,
+main header form input[type=submit],
+main header form a {
+    background-color: var(--secondary-orange);
+    border-radius: 10px;
+    color: var(--text-light);
+    padding: 12px;
+    border: none;
+    font-size: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+main header form input[type=submit]:hover, main header form a:hover {
+    background-color: var(--hover-orange);
+}
+
+main header form input {
+    border: 1px solid var(--secondary-orange);
+    background-color: var(--text-light);
+    color: var(--text-dark);
+    width: 150px;
+}
+main header form input::placeholder {
+    color: #999;
+}
+main header form input[type="date"] {
+    width: 170px;
+}
+
+/* --- CONTENU PRINCIPAL / RÉSULTATS --- */
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    padding: 50px 20px;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.results section {
+    width: 300px;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.results section img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.results section p {
+    padding: 5px 15px;
+    line-height: 1.4;
+    width: 100%;
+}
+.results section p:first-of-type {
+    padding-top: 15px;
+    font-family: "Roboto-Bold", sans-serif;
+}
+
+
+.results section a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-dark);
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+    border-radius: 5px;
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+.results section a:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* --- RÉACTIVITÉ --- */
+@media (max-width: 768px) {
+    main header {
+        height: auto;
+        padding: 30px 10px;
+        background-position: center top;
+        background-size: cover;
+    }
+    main header h1 {
+        font-size: 40px;
+    }
+    main header form {
+        flex-direction: column;
+        width: 100%;
+    }
+    main header form input, main header form select, main header form a {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    main header form input[type="date"] {
+        width: 100%;
+    }
+    .results {
+        padding: 30px 10px;
+    }
+}
