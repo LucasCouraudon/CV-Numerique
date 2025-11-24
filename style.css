@@ -1,4 +1,3 @@
-/* style.css (CORRECTION SOULIGNEMENT DES LIENS) */
 :root {
     --primary-color: #61dafb; /* Bleu Azur */
     --secondary-color: #CCFF00; /* Vert Acide / Chaux */
@@ -41,13 +40,13 @@ body {
     -webkit-text-fill-color: transparent;
     font-size: 1.5em;
     font-weight: 700;
-    text-decoration: none; /* CORRECTION: Retrait du soulignement du logo */
+    text-decoration: none;
 }
 .navbar a {
     color: var(--text-light);
     padding: 0 15px;
     transition: color 0.3s;
-    text-decoration: none; /* CORRECTION: Retrait du soulignement des liens de navigation */
+    text-decoration: none;
 }
 .navbar a:hover { color: var(--secondary-color); }
 
@@ -74,7 +73,7 @@ h1, h2, h3 {
     margin: 0 auto;
 }
 
-/* 1. Icône Géante (espacement corrigé) */
+/* 1. Icône Géante*/
 .profile-block {
     flex-shrink: 0;
     margin-right: 80px;
@@ -97,7 +96,7 @@ h1, h2, h3 {
     flex-grow: 1;
     text-align: left;
 }
-.hero-content-text .cta-button {
+.cta-button {
     margin-top: 40px;
     display: inline-block;
     background-color: var(--primary-color);
@@ -108,9 +107,9 @@ h1, h2, h3 {
     font-size: 1.1em;
     transition: background 0.3s, box-shadow 0.3s;
     box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
-    text-decoration: none; /* CORRECTION: Retrait du soulignement */
+    text-decoration: none;
 }
-.hero-content-text .cta-button:hover {
+.cta-button:hover {
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     color: var(--background-dark);
 }
@@ -150,20 +149,17 @@ h1, h2, h3 {
     font-size: 1.5em;
 }
 
-/* CORRECTION 4. ALIGNEMENT DES BADGES DANS LES CARTES DE PROJET */
 .project-card .badges {
     justify-content: flex-start !important;
     margin-left: 0;
     margin-right: 0;
 }
 
-/* 4. & 5. CORRECTIONS DANS LA PAGE PROJETS */
 .project-card p {
     margin: 15px 0;
     color: var(--text-light);
 }
 
-/* Boutons de projet (Style et Espacement) */
 .project-card .cta-button {
     background: none;
     color: var(--secondary-color);
@@ -175,7 +171,7 @@ h1, h2, h3 {
     display: inline-block;
     font-weight: 700;
     transition: background-color 0.3s, box-shadow 0.3s;
-    text-decoration: none; /* CORRECTION: Retrait du soulignement */
+    text-decoration: none;
 }
 
 .project-card .cta-button:hover {
@@ -208,7 +204,7 @@ footer {
 }
 footer a {
     color: var(--primary-color);
-    text-decoration: none; /* CORRECTION: Retrait du soulignement des liens du footer */
+    text-decoration: none;
 }
 
 /* KEYFRAMES et RÉACTIVITÉ (inchangés) */
