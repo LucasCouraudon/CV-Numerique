@@ -150,7 +150,7 @@ h1, h2, h3 {
 }
 
 .project-card .badges {
-    justify-content: flex-start !important;
+    justify-content: flex-start;
     margin-left: 0;
     margin-right: 0;
 }
