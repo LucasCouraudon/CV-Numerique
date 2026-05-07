@@ -1,11 +1,20 @@
+image: alpine:latest
+
 pages:
   stage: deploy
   script:
-    - mkdir .public
-    - cp -r * .public
-    - mv .public public
+    - mkdir .tmp_public
+    - cp -r * .tmp_public/ 2>/dev/null || true
+    # Suppression des fichiers lourds inutiles pour le site web
+    - find .tmp_public -name "*.msi" -delete
+    - find .tmp_public -name "Forêt.jpg" -delete
+    # Nettoyage des dossiers de build s'ils existent
+    - rm -rf .tmp_public/target
+    - rm -rf .tmp_public/.git
+    - rm -rf public
+    - mv .tmp_public public
   artifacts:
     paths:
       - public
   only:
-    - main # Remplacez par 'master' si c'est le nom de votre branche principale
+    - main
