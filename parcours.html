@@ -4,72 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Parcours - Lucas Couraudon</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/parcours.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar">
-    <a href="index.html" class="logo"><i class="fas fa-code" style="margin-right: 8px;"></i> LUCAS COURAUDON</a>
-    <div>
-        <a href="projets.html"><i class="fas fa-project-diagram"></i> Projets</a>
-        <a href="parcours.html"><i class="fas fa-graduation-cap"></i> Mon Parcours</a>
-        <a href="mailto:couraudonlucas01@gmail.com"><i class="fas fa-envelope"></i> Contact</a>
-        <a href="https://gitlab.univ-lille.fr/lucas.couraudon.etu" target="_blank"><i class="fab fa-gitlab"></i> GitLab</a>
-        <a href="CV-CouraudonLucas.pdf" download="CV-CouraudonLucas.pdf"><i class="fas fa-file-download"></i> Mon CV</a>
+
+<nav class="barre-navigation">
+    <div class="liens-navigation">
+        <a href="index.html">PROFIL</a>
+        <a href="projets.html">PROJETS</a>
+        <a href="parcours.html">PARCOURS</a>
+        <a href="mailto:couraudonlucas01@gmail.com">CONTACT</a>
+        <a href="docs/CV-CouraudonLucas.pdf" download>CV</a>
     </div>
 </nav>
 
-<section>
-    <h1>Mon Expérience et Mes Compétences</h1>
-    <p style="color: var(--text-muted); margin-bottom: 40px;">Un développeur est plus que son code. Découvrez mes savoir-faire techniques et mes savoir-être professionnels.</p>
+<section class="entete-page">
+    <h1 class="titre-principal">MON PARCOURS</h1>
+    <p class="sous-titre-technique">DOSSIER_TECHNIQUE_SYSTEM_V2.3</p>
+</section>
 
-    <div class="project-card">
-        <h2><i class="fas fa-graduation-cap"></i> Formation</h2>
-        <p><strong>BUT Informatique (Actuellement en 2e année)</strong> - IUT de Lille</p>
-        <p><strong>Bac Général (2024)</strong> - Lycée Pablo Neruda (Dieppe)</p>
-        <p>Mention Bien et Européenne. Spécialités : Mathématiques et Informatique.</p>
-    </div>
-
-    <div class="project-card">
-        <h2><i class="fas fa-briefcase"></i> Expérience Professionnelle</h2>
-        <h3><strong>CDI Employé Polyvalent</strong> - Burger King Lezenne (Nov 2024 - Juin 2025)</h3>
-        <ul>
-            <li><i class="fas fa-check-circle"></i> Démonstration de la <strong>capacité à travailler sous pression</strong> dans un environnement rapide.</li>
-            <li><i class="fas fa-check-circle"></i> Développement du sens de la <strong>gestion des priorités et des délais</strong>.</li>
-            <li><i class="fas fa-check-circle"></i> Maîtrise du <strong>travail en équipe efficace</strong> et de la <strong>réactivité face aux imprévus</strong>.</li>
-        </ul>
-        <h3>Missions Bénévoles - Petit-Caux (Été 2023)</h3>
-        <ul>
-            <li><i class="fas fa-check-circle"></i> Renforcement du <strong>sens de la communication</strong> et de la <strong>prise d'initiatives</strong>.</li>
-            <li><i class="fas fa-check-circle"></i> Preuve d'une forte <strong>adaptabilité</strong> dans des contextes variés.</li>
-        </ul>
-    </div>
-
-    <div class="project-card">
-        <h2><i class="fas fa-star"></i> Savoir-Être & Langues</h2>
-        <div class="badges" style="justify-content: flex-start;">
-            <span class="badge">Organisé</span>
-            <span class="badge">Autonome & Rigoureux</span>
-            <span class="badge">Volontaire & Curieux</span>
-            <span class="badge">Capacité d'adaptation</span>
-            <span class="badge">Capacité d'écoute</span>
+<section class="section-contenu-parcours">
+    <div class="grille-parcours">
+        
+        <div class="bloc-parcours fenetre-terminal">
+            <div class="entete-terminal">
+                <span class="point-terminal"></span><span class="point-terminal"></span><span class="point-terminal"></span>
+                <span class="titre-terminal">formation.log</span>
+            </div>
+            <div class="contenu-terminal">
+                <div class="item-parcours">
+                    <h3>BUT INFORMATIQUE (2E ANNÉE)</h3>
+                    <p class="institution">IUT de Lille | Université de Lille</p>
+                    <p class="description-longue">Spécialisation en <strong>Parcours A : Réalisation d'applications</strong> (conception, développement, validation).</p>
+                </div>
+                <div class="item-parcours">
+                    <h3>BAC GÉNÉRAL (2024)</h3>
+                    <p class="institution">Lycée Pablo Neruda (Dieppe)</p>
+                    <p class="description-longue">Obtenu avec <strong>Mention Bien et Européenne</strong>. Spécialités Mathématiques et Informatique (NSI), complétées par l'option Mathématiques Expertes.</p>
+                </div>
+            </div>
         </div>
-        <p style="margin-top: 25px;"><strong>Anglais :</strong> Niveau B2 certifié (Cambridge English Certificate).</p>
-    </div>
-    <div class="project" style="text-align: center; margin-top: 20px;">
-        <a href="CV-CouraudonLucas.pdf" download="CV-CouraudonLucas.pdf" class="cta-button">Télécharger mon CV <i class="fas fa-arrow-right"></i></a>
+
+        <div class="bloc-parcours">
+            <div class="bloc-detail">
+                <h3>SAVOIR-ÊTRE & LANGUES</h3>
+                <div class="liste-logiciels">
+                    <div class="item-logiciel"><i class="fas fa-check"></i> ORGANISÉ</div>
+                    <div class="item-logiciel"><i class="fas fa-check"></i> AUTONOME & RIGOUREUX</div>
+                    <div class="item-logiciel"><i class="fas fa-check"></i> VOLONTAIRE & CURIEUX</div>
+                    <div class="item-logiciel"><i class="fas fa-check"></i> CAPACITÉ D'ADAPTATION</div>
+                    <div class="item-logiciel"><i class="fas fa-check"></i> CAPACITÉ D'ÉCOUTE</div>
+                    <div class="item-logiciel"><i class="fas fa-comments"></i> COMM. INTERCULTURELLE</div>
+                </div>
+                <div class="langue-box">
+                    <p><strong>ANGLAIS :</strong> Niveau B2 certifié (Cambridge English Certificate)</p>
+                    <p class="detail-cours-samedi">
+                        <i class="fas fa-graduation-cap"></i> <strong>Cours du samedi :</strong> Formation à la communication interculturelle, compréhension des biais et des contextes globaux.
+                    </p>
+                    <p class="appris-text"><i class="fas fa-lightbulb"></i> <strong>Appris :</strong> Analyse des biais culturels pour optimiser les collaborations internationales.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bloc-parcours carte-projet grille-pleine-largeur">
+            <div class="corps-carte">
+                <div class="entete-carte">
+                    <span class="numero-projet"><i class="fas fa-briefcase"></i></span>
+                    <h3>EXPÉRIENCES PROFESSIONNELLES & ENGAGEMENTS</h3>
+                </div>
+                
+                <div class="grille-experiences">
+                    <div class="detail-exp highlight-exp">
+                        <div class="tag-job"><i class="fas fa-star"></i> EMPLOYÉ DU MOIS</div>
+                        <h4>CDI - BURGER KING</h4>
+                        <p class="meta-exp">Lezenne | Nov 2024 - Juin 2025 (8 mois)</p>
+                        <ul class="liste-points">
+                            <li><i class="fas fa-caret-right"></i> <strong>Excellence Opérationnelle :</strong> Gestion des services à flux tendu sous haute pression, garantissant la rapidité et la conformité.</li>
+                            <li><i class="fas fa-caret-right"></i> <strong>Engagement :</strong> Distinction d'employé du mois pour la fiabilité, l'efficacité et l'esprit d'équipe.</li>
+                        </ul>
+                        <p class="appris-text"><i class="fas fa-lightbulb"></i> <strong>Appris :</strong> Endurance, rigueur absolue et coordination d'équipe en milieu critique.</p>
+                    </div>
+
+                    <div class="detail-exp">
+                        <h4>STAGE ERASMUS (GRÈCE)</h4>
+                        <p class="meta-exp">Univ. West Attica (Egaleo) | Avril - Juin</p>
+                        <ul class="liste-points">
+                            <li><i class="fas fa-caret-right"></i> Accueil au pôle informatique de l'université pendant 3 mois avec résidence à Athènes.</li>
+                            <li><i class="fas fa-caret-right"></i> Collaboration technique et échanges avec des étudiants de nationalités diverses.</li>
+                            <li><i class="fas fa-caret-right"></i> <strong>Langue :</strong> Travail et communication réalisés intégralement en anglais.</li>
+                        </ul>
+                        <p class="appris-text"><i class="fas fa-lightbulb"></i> <strong>Appris :</strong> Aisance professionnelle en anglais et adaptabilité internationale.</p>
+                    </div>
+
+                    <div class="detail-exp">
+                        <h4>MISSIONS BÉNÉVOLES</h4>
+                        <p class="meta-exp">Petit-Caux | Été 2023</p>
+                        <ul class="liste-points">
+                            <li><i class="fas fa-caret-right"></i> <strong>Animation :</strong> Encadrement pédagogique et gestion de groupes en centre de loisirs.</li>
+                            <li><i class="fas fa-caret-right"></i> <strong>Accueil :</strong> Information du public et gestion des flux dans un domaine culturel.</li>
+                            <li><i class="fas fa-caret-right"></i> <strong>Événementiel :</strong> Soutien logistique lors de manifestations locales.</li>
+                        </ul>
+                        <p class="appris-text"><i class="fas fa-lightbulb"></i> <strong>Appris :</strong> Sens des responsabilités, patience et gestion de l'imprévu.</p>
+                    </div>
+
+                    <div class="detail-exp">
+                        <h4>AUTRES ENGAGEMENTS</h4>
+                        <p class="meta-exp">Missions transversales</p>
+                        <ul class="liste-points">
+                            <li><i class="fas fa-caret-right"></i> <strong>Ambassadeur :</strong> Salon de l'Étudiant & JPO pour représenter l'IUT de Lille.</li>
+                            <li><i class="fas fa-caret-right"></i> <strong>Citoyenneté :</strong> Scrutateur lors des élections municipales (rigueur procédurale).</li>
+                            <li><i class="fas fa-caret-right"></i> <strong>Gestion :</strong> Organisation complète et animation d'une baby shower.</li>
+                            <li><i class="fas fa-caret-right"></i> <strong>Gastronomie :</strong> Stage d'observation d'une semaine en restaurant haut de gamme.</li>
+                        </ul>
+                        <p class="appris-text"><i class="fas fa-lightbulb"></i> <strong>Appris :</strong> Polyvalence, vulgarisation technique et planification logistique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
-<footer>
-    <p>
-        <strong>Contactez-moi</strong> :
-        <a href="mailto:couraudonlucas01@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-        |
-        <a href="https://www.linkedin.com/in/lucas-couraudon-b217b035a/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        |
-        <a href="CV-CouraudonLucas.pdf" download="CV-CouraudonLucas.pdf"><i class="fas fa-file-download"></i> Mon CV</a>
-    </p>
+<footer class="pied-page-minimal">
+    <div class="liens-externes-footer">
+        <a href="https://www.linkedin.com/in/lucas-couraudon-b217b035a/" target="_blank"><i class="fab fa-linkedin"></i> LINKEDIN</a>
+        <a href="mailto:couraudonlucas01@gmail.com"><i class="fas fa-envelope"></i> EMAIL</a>
+        <a href="docs/CV-CouraudonLucas.pdf" download><i class="fas fa-file-pdf"></i> CV PDF</a>
+    </div>
 </footer>
+
 </body>
 </html>

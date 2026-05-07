@@ -3,60 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Couraudon - Développeur BUT Informatique</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Lucas Couraudon - Portfolio 2026</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar">
-    <a href="index.html" class="logo"><i class="fas fa-code" style="margin-right: 8px;"></i> LUCAS COURAUDON</a>
-    <div>
-        <a href="projets.html"><i class="fas fa-project-diagram"></i> Projets</a>
-        <a href="parcours.html"><i class="fas fa-graduation-cap"></i> Mon Parcours</a>
-        <a href="mailto:couraudonlucas01@gmail.com"><i class="fas fa-envelope"></i> Contact</a>
-        <a href="https://gitlab.univ-lille.fr/lucas.couraudon.etu" target="_blank"><i class="fab fa-gitlab"></i> GitLab</a>
-        <a href="CV-CouraudonLucas.pdf" download="CV-CouraudonLucas.pdf"><i class="fas fa-file-download"></i> Mon CV</a>
+
+<nav class="barre-navigation">
+    <div class="liens-navigation">
+        <a href="index.html">PROFIL</a>
+        <a href="projets.html">PROJETS</a>
+        <a href="parcours.html">PARCOURS</a>
+        <a href="mailto:couraudonlucas01@gmail.com">CONTACT</a>
+        <a href="docs/CV-CouraudonLucas.pdf" download>CV</a>
     </div>
 </nav>
 
-<section class="hero-visual">
-    <div class="profile-block">
-        <i class="fas fa-terminal giant-icon"></i>
+<section class="visuel-hero">
+    <div class="disposition-titre-hero">
+        <div class="cote-profil">
+            <div class="forme-rouge"></div>
+            <img src="img/pdp.png" alt="Lucas Couraudon" class="photo-profil-gauche">
+        </div>
+
+        <div class="cote-titre">
+            <h1 class="titre-principal">PORTFOLIO</h1>
+            <span class="annee-hero">2026</span>
+        </div>
     </div>
 
-    <div class="hero-content-text">
-        <h1>Étudiant en BUT Informatique</h1>
-        <p class="pitch">
-            Je suis Lucas COURAUDON, étudiant de 19 ans en deuxième année de BUT Informatique, passionné par la résolution de problèmes par le code. Fort de mes acquis, mon expertise <strong>technique</strong> s'étend du <strong>C</strong> au <strong>Java</strong>, en passant par <strong>Python</strong> et <strong>PostgreSQL</strong>, le tout dans l'environnement <strong>Linux</strong>.
-            Mon portfolio est la preuve concrète de mes compétences : de la <strong>conception de jeux en Java</strong> au <strong>développement web pour l'écomobilité</strong>. Ma capacité d'adaptation et ma rigueur sont <strong>renforcées par mes expériences sur le terrain</strong>, faisant de moi un futur développeur complet et autonome.
-        </p>
-        <a href="projets.html" class="cta-button">Explorer mes Réalisations Techniques <i class="fas fa-arrow-right"></i></a>
+    <div class="sous-titre-hero">
+        <i class="fas fa-square"></i> ÉTUDIANT EN BUT INFORMATIQUE
+    </div>
+
+    <ul class="menu-jeu">
+        <li><a href="projets.html">LANCER EXPLORATION</a></li>
+        <li><a href="parcours.html">DOSSIER TECHNIQUE</a></li>
+        <li><a href="docs/CV-CouraudonLucas.pdf" download>TÉLÉCHARGER CV</a></li>
+    </ul>
+</section>
+
+<section class="section-a-propos">
+    <div class="conteneur-a-propos">
+        <div class="visuel-technique-a-propos">
+            <div class="fenetre-terminal">
+                <div class="entete-terminal">
+                    <span class="point-terminal"></span><span class="point-terminal"></span><span class="point-terminal"></span>
+                    <span class="titre-terminal">infos_systeme.sh</span>
+                </div>
+                <div class="contenu-terminal">
+                    <p><span class="invite-commande">></span> nom: "Lucas Couraudon"</p>
+                    <p><span class="invite-commande">></span> statut: "Étudiant"</p>
+                    <p><span class="invite-commande">></span> ville: "Lille"</p>
+                    <p><span class="invite-commande">></span> cursus: "BUT2 Info Parcours A"</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="texte-a-propos">
+            <h2 class="titre-section-a-propos">À PROPOS</h2>
+            <p class="description-a-propos">
+                Étudiant de 19 ans passionné par le développement, j'ai grandi entre deux cultures, passant toutes mes vacances d'enfance à Djerba en Tunisie. 
+                Cette dualité m'a apporté une grande adaptabilité et une ouverture d'esprit naturelle. 
+                Je me spécialise dans la conception d'applications innovantes, fort d'un savoir-faire technique bâti sur de nombreux projets personnels ambitieux.
+            </p>
+
+            <div class="grille-details-a-propos">
+                <div class="bloc-detail">
+                    <h3>STACK TECHNIQUE</h3>
+                    <div class="liste-logiciels">
+                        <div class="item-logiciel"><i class="fab fa-java"></i> JAVA (POO)</div>
+                        <div class="item-logiciel"><i class="fas fa-c"></i> C</div>
+                        <div class="item-logiciel"><i class="fab fa-python"></i> PYTHON</div>
+                        <div class="item-logiciel"><i class="fab fa-js"></i> JAVASCRIPT</div>
+                        <div class="item-logiciel"><i class="fas fa-code"></i> TYPESCRIPT</div>
+                        <div class="item-logiciel"><i class="fas fa-bolt"></i> VITE</div>
+                        <div class="item-logiciel"><i class="fab fa-android"></i> ANDROID</div>
+                        <div class="item-logiciel"><i class="fab fa-linux"></i> LINUX (DEBIAN)</div>
+                        <div class="item-logiciel"><i class="fas fa-database"></i> SQL / POSTGRESQL</div>
+                        <div class="item-logiciel"><i class="fab fa-git-alt"></i> GIT / GITLAB</div>
+                        <div class="item-logiciel"><i class="fab fa-html5"></i> HTML5</div>
+                        <div class="item-logiciel"><i class="fab fa-css3-alt"></i> CSS3</div>
+                    </div>
+                </div>
+                
+                <div class="bloc-detail-secondaire">
+                    <div class="colonne-info">
+                        <h3>FORMATION</h3>
+                        <p><strong>BUT Informatique</strong> - IUT de Lille Parours A</p>
+                        <p><strong>Bac Général</strong> - Mention Bien et Européenne</p>
+                    </div>
+
+                    <div class="colonne-info">
+                        <h3>LANGUES</h3>
+                        <p><strong>ANGLAIS</strong> - Niveau B2 certifié (Cambridge English Certificate)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="tech-stack">
-    <h2 style="text-align: center;">Ma Stack Technique</h2>
-    <div class="badges" style="justify-content: center;">
-        <span class="badge"><i class="fab fa-html5"></i> HTML5</span>
-        <span class="badge"><i class="fab fa-css3-alt"></i> CSS3</span>
-        <span class="badge"><i class="fas fa-c"></i> C</span>
-        <span class="badge"><i class="fab fa-java"></i> Java (POO)</span>
-        <span class="badge"><i class="fab fa-python"></i> Python</span>
-        <span class="badge"><i class="fab fa-linux"></i> Linux</span>
-        <span class="badge"><i class="fas fa-database"></i> SQL/PostgreSQL</span>
-        <span class="badge"><i class="fab fa-git-alt"></i> Git / GitLab</span>
+<section class="section-vitrine">
+    <h2 class="titre-recapitulatif">RÉCAP PROJET 2026</h2>
+    
+    <div class="conteneur-projets-statique">
+        <div class="element-vitrine">
+            <div class="galerie-sacadee">
+                <img src="img/IDE_Shots1.png" class="image-capture">
+                <img src="img/IDE_Shots2.png" class="image-capture">
+                <img src="img/IDE_Shots3.png" class="image-capture">
+                <img src="img/IDE_Shots4.png" class="image-capture">
+            </div>
+            <div class="infos-survol">
+                <div class="entete-survol">
+                    <span>01</span>
+                    <h3>ILE DES ÉQUILIBRES</h3>
+                </div>
+                <div class="badges-survol">
+                    <span>JAVA</span>
+                    <span>JAVAFX</span>
+                </div>
+                <a href="projets.html" class="bouton-details">VOIR PLUS</a>
+            </div>
+        </div>
+
+        <div class="element-vitrine">
+            <div class="galerie-sacadee">
+                <img src="img/Xiaomi_Shots1.png" class="image-capture">
+                <img src="img/Xiaomi_Shots2.png" class="image-capture">
+                <img src="img/Xiaomi_Shots3.png" class="image-capture">
+                <img src="img/Xiaomi_Shots4.png" class="image-capture">
+            </div>
+            <div class="infos-survol">
+                <div class="entete-survol">
+                    <span>02</span>
+                    <h3>ÉCOMOBILITÉ</h3>
+                </div>
+                <div class="badges-survol">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                </div>
+                <a href="projets.html" class="bouton-details">VOIR PLUS</a>
+            </div>
+        </div>
+
+        <div class="element-vitrine">
+            <div class="galerie-sacadee">
+                <img src="img/GoldenAce_Shots1.png" class="image-capture">
+                <img src="img/GoldenAce_Shots2.png" class="image-capture">
+                <img src="img/GoldenAce_Shots3.png" class="image-capture">
+                <img src="img/GoldenAce_Shots4.png" class="image-capture">
+            </div>
+            <div class="infos-survol">
+                <div class="entete-survol">
+                    <span>03</span>
+                    <h3>CASINO AGILE</h3>
+                </div>
+                <div class="badges-survol">
+                    <span>SCRUM</span>
+                    <span>GIT</span>
+                </div>
+                <a href="projets.html" class="bouton-details">VOIR PLUS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="action-page-projets">
+        <a href="projets.html" class="bouton-vers-tous-projets">VOIR TOUS LES PROJETS <i class="fas fa-arrow-right"></i></a>
     </div>
 </section>
 
-<footer>
-    <p>
-        <strong>Contactez-moi</strong> :
-        <a href="mailto:couraudonlucas01@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-        |
-        <a href="https://www.linkedin.com/in/lucas-couraudon-b217b035a/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        |
-        <a href="CV-CouraudonLucas.pdf" download="CV-CouraudonLucas.pdf"><i class="fas fa-file-download"></i> Mon CV</a>
-    </p>
+<footer class="pied-page-minimal">
+    <div class="liens-externes-footer">
+        <a href="https://www.linkedin.com/in/lucas-couraudon-b217b035a/" target="_blank">
+            <i class="fab fa-linkedin"></i> LINKEDIN
+        </a>
+        <a href="mailto:couraudonlucas01@gmail.com">
+            <i class="fas fa-envelope"></i> EMAIL
+        </a>
+        <a href="docs/CV-CouraudonLucas.pdf" download>
+            <i class="fas fa-file-pdf"></i> CV PDF
+        </a>
+    </div>
 </footer>
+
 </body>
 </html>

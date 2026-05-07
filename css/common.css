@@ -1,0 +1,222 @@
+:root {
+    --fond-noir: #050505;
+    --accent-bleu: #00d4ff;
+    --accent-rouge: #8c0022;
+    --texte-blanc: #ffffff;
+    --police-titre: 'Anton', sans-serif;
+    --police-corps: 'Inter', sans-serif;
+    --police-technique: 'JetBrains Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fond-noir);
+    color: var(--texte-blanc);
+    font-family: var(--police-corps);
+    background-image: radial-gradient(circle at 50% 50%, #001a2e 0%, #050505 100%);
+    background-attachment: fixed;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- NAVIGATION --- */
+.barre-navigation {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    z-index: 1000;
+}
+
+.liens-navigation {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.liens-navigation a {
+    text-transform: uppercase;
+    font-family: var(--police-titre);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    color: var(--texte-blanc);
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.liens-navigation a:hover, .liens-navigation a.actif {
+    background: var(--accent-bleu);
+    color: black;
+    border-radius: 20px;
+}
+
+/* --- HEADERS --- */
+.entete-page {
+    padding-top: 150px;
+    text-align: center;
+}
+
+.titre-principal {
+    font-family: var(--police-titre);
+    font-size: 8rem;
+    line-height: 1;
+    margin: 0;
+}
+
+.sous-titre-technique {
+    font-family: var(--police-technique);
+    color: var(--accent-bleu);
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+}
+
+/* --- COMPOSANTS SHARED (Terminal & Skills) --- */
+.fenetre-terminal {
+    width: 100%;
+    background: #000;
+    border: 1px solid var(--accent-bleu);
+    border-radius: 8px;
+    font-family: var(--police-technique);
+    overflow: hidden;
+}
+
+.entete-terminal {
+    background: #1a1a1a;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.point-terminal {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #333;
+}
+
+.titre-terminal {
+    font-size: 0.7rem;
+    color: #666;
+    margin-left: 10px;
+}
+
+.contenu-terminal {
+    padding: 20px;
+    font-size: 0.85rem;
+    line-height: 2;
+}
+
+.invite-commande {
+    color: var(--accent-bleu);
+    font-weight: bold;
+}
+
+.bloc-detail h3 {
+    font-family: var(--police-titre);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--accent-bleu);
+    border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+    padding-bottom: 5px;
+}
+
+.liste-logiciels {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.item-logiciel {
+    font-family: var(--police-technique);
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.item-logiciel i {
+    color: var(--accent-bleu);
+    font-size: 1.2rem;
+    width: 25px;
+    text-align: center;
+}
+
+/* --- FOOTER --- */
+.pied-page-minimal {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 60px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.liens-externes-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.liens-externes-footer a {
+    color: var(--texte-blanc);
+    text-decoration: none;
+    font-family: var(--police-titre);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.liens-externes-footer a i {
+    color: var(--accent-bleu);
+}
+
+.liens-externes-footer a:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+    text-shadow: 0 0 10px var(--accent-bleu);
+}
+
+/* --- LOGIQUE DE GALERIE (CORRECTION) --- */
+.galerie-sacadee {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.image-capture {
+    width: 100%;
+    flex: 0 0 100%; /* FORCE CHAQUE IMAGE À PRENDRE 100% DU CADRE */
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* CENTRE L'IMAGE */
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+@keyframes transitionImages {
+    0%, 20% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-100%); }
+    50%, 70% { transform: translateX(-200%); }
+    75%, 95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}

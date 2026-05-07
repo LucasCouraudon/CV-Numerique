@@ -1,0 +1,41 @@
+.section-contenu-projets { padding: 60px 10%; max-width: 1200px; margin: 0 auto; }
+.grille-projets-tuiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 40px; }
+
+.element-vitrine-detail {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden; /* CRITIQUE : CACHE LES IMAGES QUI DEBORDENT */
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.element-vitrine-detail:hover {
+    border-color: var(--accent-bleu);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+}
+
+.element-vitrine-detail .galerie-sacadee { 
+    height: 220px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    display: flex; 
+}
+
+.element-vitrine-detail:hover .galerie-sacadee { animation: transitionImages 12s infinite; }
+.element-vitrine-detail:hover .image-capture { opacity: 1; }
+
+.corps-projet-detail { padding: 25px; display: flex; flex-direction: column; gap: 15px; flex-grow: 1; }
+.entete-projet { display: flex; align-items: center; gap: 15px; }
+.entete-projet h3 { font-family: var(--police-titre); font-size: 1.4rem; }
+.numero-projet { font-family: var(--police-technique); color: var(--accent-bleu); font-weight: bold; }
+
+.badges-projet { display: flex; flex-wrap: wrap; gap: 8px; }
+.badge { font-family: var(--police-technique); font-size: 0.65rem; padding: 4px 10px; background: rgba(0, 212, 255, 0.1); color: var(--accent-bleu); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 4px; }
+
+.corps-projet-detail p { font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); line-height: 1.5; flex-grow: 1; }
+
+.liens-projet-boutons { display: flex; gap: 10px; margin-top: 10px; }
+.liens-projet-boutons a { flex: 1; text-align: center; font-family: var(--police-titre); font-size: 0.8rem; color: var(--texte-blanc); text-decoration: none; padding: 10px; border: 1px solid rgba(255, 255, 255, 0.2); transition: 0.3s; }
+.liens-projet-boutons a:hover { background: var(--accent-bleu); color: black; border-color: var(--accent-bleu); }

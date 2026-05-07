@@ -1,0 +1,145 @@
+/* --- HERO SECTION --- */
+.visuel-hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    background: radial-gradient(circle at 35% 45%, rgba(0, 212, 255, 0.2) 0%, transparent 55%);
+}
+
+.disposition-titre-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.cote-profil {
+    position: relative;
+    width: 250px;
+    height: 180px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.forme-rouge {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    width: 160px;
+    height: 160px;
+    background-color: var(--accent-rouge);
+    border-radius: 20px 80px 80px 20px;
+    z-index: 1;
+}
+
+.photo-profil-gauche {
+    position: relative;
+    z-index: 2;
+    height: 230px;
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.6));
+}
+
+.cote-titre {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+}
+
+.annee-hero {
+    font-family: var(--police-titre);
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 3.5rem;
+}
+
+.sous-titre-hero {
+    font-family: var(--police-technique);
+    color: var(--accent-bleu);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-jeu {
+    list-style: none;
+    text-align: center;
+}
+
+.menu-jeu li a {
+    font-family: var(--police-titre);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: 0.3s;
+    display: block;
+    margin: 10px 0;
+}
+
+.menu-jeu li a:hover {
+    color: var(--texte-blanc);
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px var(--accent-bleu);
+}
+
+/* --- À PROPOS --- */
+.section-a-propos {
+    padding: 100px 10%;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.conteneur-a-propos {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.visuel-technique-a-propos { flex: 1; display: flex; justify-content: center; }
+.texte-a-propos { flex: 1.5; }
+.titre-section-a-propos { font-family: var(--police-titre); font-size: 4rem; margin-bottom: 20px; }
+.description-a-propos { font-size: 1rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 40px; }
+
+.bloc-detail-secondaire { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.colonne-info h3 { font-family: var(--police-titre); font-size: 1.2rem; margin-bottom: 20px; color: var(--accent-bleu); border-bottom: 1px solid rgba(0, 212, 255, 0.3); padding-bottom: 5px; }
+.colonne-info p { font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin-bottom: 8px; }
+
+/* --- VITRINE D'ACCUEIL --- */
+.section-vitrine { padding: 100px 10%; text-align: center; }
+.titre-recapitulatif { font-family: var(--police-titre); font-size: 3.5rem; margin-bottom: 60px; }
+.conteneur-projets-statique { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 60px; }
+
+.element-vitrine { 
+    position: relative; 
+    aspect-ratio: 16/10; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    background: #111; 
+    cursor: pointer; 
+    border: 1px solid rgba(255,255,255,0.1); 
+}
+
+.element-vitrine:hover .galerie-sacadee { 
+    animation: transitionImages 5s infinite; /* Un peu plus lent pour le teaser */
+}
+
+.element-vitrine:hover .image-capture { opacity: 1; }
+
+.infos-survol { position: absolute; bottom: -100%; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.9) 30%, transparent); display: flex; flex-direction: column; justify-content: flex-end; padding: 30px; transition: 0.4s ease-out; }
+.element-vitrine:hover .infos-survol { bottom: 0; }
+.entete-survol { display: flex; align-items: center; gap: 15px; margin-bottom: 10px; }
+.entete-survol h3 { font-family: var(--police-titre); font-size: 1.5rem; text-align: left; }
+.badges-survol { display: flex; gap: 10px; margin-bottom: 20px; }
+.badges-survol span { font-family: var(--police-technique); font-size: 0.6rem; padding: 3px 8px; border: 1px solid var(--accent-bleu); color: var(--accent-bleu); border-radius: 4px; }
+.bouton-details { align-self: flex-start; font-family: var(--police-titre); font-size: 0.8rem; color: black; background: var(--accent-bleu); padding: 8px 20px; text-decoration: none; border-radius: 4px; }
+
+.bouton-vers-tous-projets { font-family: var(--police-titre); font-size: 1rem; color: var(--texte-blanc); text-decoration: none; padding: 15px 40px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); transition: 0.3s; letter-spacing: 2px; }
+.bouton-vers-tous-projets:hover { background: var(--accent-bleu); color: black; border-color: var(--accent-bleu); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2); }
