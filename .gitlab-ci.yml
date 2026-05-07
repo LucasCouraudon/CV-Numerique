@@ -1,9 +1,22 @@
 pages:
   stage: deploy
   script:
-    - mkdir public
-    - cp -r * public/ 2>/dev/null || true
-    - rm -rf public/public
+    - mkdir .tmp_public
+    - cp -r * .tmp_public/ 2>/dev/null || true
+    
+    # --- NETTOYAGE CHOC POUR L'ARCHIVE ---
+    # On supprime tous les fichiers .msi et les grosses images
+    - find .tmp_public -name "*.msi" -delete
+    - find .tmp_public -name "Forêt.jpg" -delete
+    
+    # On supprime les dossiers inutiles (cache, git, etc.)
+    - rm -rf .tmp_public/target
+    - rm -rf .tmp_public/.git
+    - rm -rf .tmp_public/.tmp_public
+    # -------------------------------------
+    
+    - rm -rf public
+    - mv .tmp_public public
   artifacts:
     paths:
       - public
