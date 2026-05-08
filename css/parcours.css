@@ -131,3 +131,64 @@
 @media (max-width: 900px) {
     .grille-parcours { grid-template-columns: 1fr; }
 }
+/* --- CORRECTIF RESPONSIVE DÉDIÉ PARCOURS --- */
+@media (max-width: 950px) {
+    .section-contenu-parcours {
+        padding: 40px 5%; /* Réduction des marges latérales pour gagner de la place */
+        gap: 30px;
+    }
+
+    .grille-parcours {
+        grid-template-columns: 1fr; /* Passage en une seule colonne obligatoire */
+        gap: 30px;
+    }
+
+    .bloc-parcours {
+        padding: 20px; /* Moins de padding interne dans les blocs */
+    }
+
+    /* Ajustement du terminal sur mobile */
+    .contenu-terminal {
+        padding: 15px;
+        font-size: 0.75rem; /* Texte légèrement plus petit pour éviter les retours à la ligne */
+    }
+
+    /* Force les expériences professionnelles à s'empiler proprement */
+    .grille-experiences {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .carte-projet {
+        padding: 20px; /* Réduction du padding du bloc bleu */
+    }
+
+    .detail-exp {
+        padding: 20px;
+    }
+
+    /* Ajustement des badges et icônes */
+    .liste-logiciels {
+        grid-template-columns: 1fr 1fr; /* 2 colonnes de badges au lieu d'une grille large */
+        gap: 10px;
+    }
+
+    .langue-box {
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    .item-parcours h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .liste-logiciels {
+        grid-template-columns: 1fr; /* 1 seule colonne de badges sur très petit écran */
+    }
+    
+    .detail-exp h4 {
+        font-size: 1.1rem;
+    }
+}

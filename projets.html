@@ -26,15 +26,31 @@
     <p class="sous-titre-technique">EXPLORATION_DES_RÉALISATIONS_V2.0</p>
 </section>
 
-<section class="section-contenu-projets">
-    <div class="grille-projets-tuiles">
+<div class="portfolio-filtres-container">
+    <div class="recherche-wrapper">
+        <i class="fas fa-search"></i>
+        <input type="text" id="projectSearch" placeholder="RECHERCHER UN PROJET OU UNE TECH..." />
+    </div>
+    
+    <div class="filtres-tags" id="tagFilters">
+        <button class="tag-btn active" data-filter="all">TOUS</button>
+        <button class="tag-btn" data-filter="Java">JAVA</button>
+        <button class="tag-btn" data-filter="Web">WEB / TS</button>
+        <button class="tag-btn" data-filter="Jeux">JEUX</button>
+        <button class="tag-btn" data-filter="SAE">SAE</button>
+        <button class="tag-btn" data-filter="Linux">LINUX</button>
+    </div>
+</div>
 
-        <div class="element-vitrine-detail">
+<section class="section-contenu-projets">
+    <div class="grille-projets-tuiles" id="projectsContainer">
+
+        <div class="element-vitrine-detail" data-tags="TypeScript Vite Web DOM" data-title="Pokemap - Unys">
             <div class="galerie-sacadee">
-                <img src="img/Pokemap_Shots1.webp" class="image-capture">
-                <img src="img/Pokemap_Shots2.webp" class="image-capture">
-                <img src="img/Pokemap_Shots3.webp" class="image-capture">
-                <img src="img/Pokemap_Shots4.webp" class="image-capture">
+                <img src="img/Pokemap_Shots1.webp" class="image-capture" loading="lazy">
+                <img src="img/Pokemap_Shots2.webp" class="image-capture" loading="lazy">
+                <img src="img/Pokemap_Shots3.webp" class="image-capture" loading="lazy">
+                <img src="img/Pokemap_Shots4.webp" class="image-capture" loading="lazy">
             </div>
             <div class="corps-projet-detail">
                 <div class="entete-projet">
@@ -54,12 +70,12 @@
             </div>
         </div>
 
-        <div class="element-vitrine-detail">
+        <div class="element-vitrine-detail" data-tags="SAE Multijoueur Web Jeux Temps Réel" data-title="V.I.C.T.O.R">
             <div class="galerie-sacadee">
-                <img src="img/Victor_Shots1.webp" class="image-capture">
-                <img src="img/Victor_Shots2.webp" class="image-capture">
-                <img src="img/Victor_Shots3.webp" class="image-capture">
-                <img src="img/Victor_Shots4.webp" class="image-capture">
+                <img src="img/Victor_Shots1.webp" class="image-capture" loading="lazy">
+                <img src="img/Victor_Shots2.webp" class="image-capture" loading="lazy">
+                <img src="img/Victor_Shots3.webp" class="image-capture" loading="lazy">
+                <img src="img/Victor_Shots4.webp" class="image-capture" loading="lazy">
             </div>
             <div class="corps-projet-detail">
                 <div class="entete-projet">
@@ -80,12 +96,12 @@
             </div>
         </div>
 
-        <div class="element-vitrine-detail">
+        <div class="element-vitrine-detail" data-tags="SAE Java PostgreSQL REST Binôme" data-title="Eco-Logica">
             <div class="galerie-sacadee">
-                <img src="img/Ecologica_Shots1.webp" class="image-capture">
-                <img src="img/Ecologica_Shots2.webp" class="image-capture">
-                <img src="img/Ecologica_Shots3.webp" class="image-capture">
-                <img src="img/Ecologica_Shots4.webp" class="image-capture">
+                <img src="img/Ecologica_Shots1.webp" class="image-capture" loading="lazy">
+                <img src="img/Ecologica_Shots2.webp" class="image-capture" loading="lazy">
+                <img src="img/Ecologica_Shots3.webp" class="image-capture" loading="lazy">
+                <img src="img/Ecologica_Shots4.webp" class="image-capture" loading="lazy">
             </div>
             <div class="corps-projet-detail">
                 <div class="entete-projet">
@@ -98,7 +114,7 @@
                     <span class="badge">PostgreSQL</span>
                     <span class="badge">Bruno (Tests)</span>
                 </div>
-                <p>Développement d'une architecture REST complète en Java EE dédiée à la gestion de centres de tri. Le projet inclut la manipulation de ressources complexes (DAO/DTO), le support multi-format JSON/XML et une sécurisation robuste par token. Une attention particulière a été portée à la validation via une suite de tests automatisés sous Bruno couvrant divers scénarios critiques.</p>
+                <p>Développement d'une architecture REST complète en Java EE dédiée à la gestion de centres de tri. Le projet inclut la manipulation de ressources complexes (DAO/DTO), le support multi-format JSON/XML et une sécurisation robuste par token.</p>
                 <div class="liens-projet-boutons">
                     <a href="https://gitlab.univ-lille.fr/lucas.couraudon.etu/sae-rest" target="_blank"><i class="fab fa-gitlab"></i> GITLAB</a>
                     <a href="#" target="_blank"><i class="fas fa-vial"></i> SCÉNARIOS TESTS</a>
@@ -106,12 +122,12 @@
             </div>
         </div>
 
-        <div class="element-vitrine-detail">
+        <div class="element-vitrine-detail" data-tags="Java JavaFX Jeux Solo" data-title="Jeu de Gestion en Java">
             <div class="galerie-sacadee">
-                <img src="img/IDE_Shots1.webp" class="image-capture">
-                <img src="img/IDE_Shots2.webp" class="image-capture">
-                <img src="img/IDE_Shots3.webp" class="image-capture">
-                <img src="img/IDE_Shots4.webp" class="image-capture">
+                <img src="img/IDE_Shots1.webp" class="image-capture" loading="lazy">
+                <img src="img/IDE_Shots2.webp" class="image-capture" loading="lazy">
+                <img src="img/IDE_Shots3.webp" class="image-capture" loading="lazy">
+                <img src="img/IDE_Shots4.webp" class="image-capture" loading="lazy">
             </div>
             <div class="corps-projet-detail">
                 <div class="entete-projet">
@@ -131,12 +147,12 @@
             </div>
         </div>
 
-        <div class="element-vitrine-detail">
+        <div class="element-vitrine-detail" data-tags="HTML5 CSS3 Web Trinôme" data-title="Plateforme Écomobilité">
             <div class="galerie-sacadee">
-                <img src="img/Xiaomi_Shots1.webp" class="image-capture">
-                <img src="img/Xiaomi_Shots2.webp" class="image-capture">
-                <img src="img/Xiaomi_Shots3.webp" class="image-capture">
-                <img src="img/Xiaomi_Shots4.webp" class="image-capture">
+                <img src="img/Xiaomi_Shots1.webp" class="image-capture" loading="lazy">
+                <img src="img/Xiaomi_Shots2.webp" class="image-capture" loading="lazy">
+                <img src="img/Xiaomi_Shots3.webp" class="image-capture" loading="lazy">
+                <img src="img/Xiaomi_Shots4.webp" class="image-capture" loading="lazy">
             </div>
             <div class="corps-projet-detail">
                 <div class="entete-projet">
@@ -155,12 +171,12 @@
             </div>
         </div>
 
-        <div class="element-vitrine-detail">
+        <div class="element-vitrine-detail" data-tags="Scrum Git Équipe Jeux" data-title="Jeu de Casino Agile">
             <div class="galerie-sacadee">
-                <img src="img/GoldenAce_Shots1.webp" class="image-capture">
-                <img src="img/GoldenAce_Shots2.webp" class="image-capture">
-                <img src="img/GoldenAce_Shots3.webp" class="image-capture">
-                <img src="img/GoldenAce_Shots4.webp" class="image-capture">
+                <img src="img/GoldenAce_Shots1.webp" class="image-capture" loading="lazy">
+                <img src="img/GoldenAce_Shots2.webp" class="image-capture" loading="lazy">
+                <img src="img/GoldenAce_Shots3.webp" class="image-capture" loading="lazy">
+                <img src="img/GoldenAce_Shots4.webp" class="image-capture" loading="lazy">
             </div>
             <div class="corps-projet-detail">
                 <div class="entete-projet">
@@ -179,12 +195,12 @@
             </div>
         </div>
 
-        <div class="element-vitrine-detail">
+        <div class="element-vitrine-detail" data-tags="SAE Java JavaFX Jeux Équipe" data-title="Dédale - Jeu de Labyrinthe">
             <div class="galerie-sacadee">
-                <img src="img/Dedale_Shots1.webp" class="image-capture">
-                <img src="img/Dedale_Shots2.webp" class="image-capture">
-                <img src="img/Dedale_Shots3.webp" class="image-capture">
-                <img src="img/Dedale_Shots4.webp" class="image-capture">
+                <img src="img/Dedale_Shots1.webp" class="image-capture" loading="lazy">
+                <img src="img/Dedale_Shots2.webp" class="image-capture" loading="lazy">
+                <img src="img/Dedale_Shots3.webp" class="image-capture" loading="lazy">
+                <img src="img/Dedale_Shots4.webp" class="image-capture" loading="lazy">
             </div>
             <div class="corps-projet-detail">
                 <div class="entete-projet">
@@ -197,7 +213,7 @@
                     <span class="badge">Java</span>
                     <span class="badge">JavaFX</span>
                 </div>
-                <p>Développement collaboratif d'un jeu de labyrinthe complet. Le projet propose un <strong>Mode Libre</strong> intégrant des algorithmes de génération procédurale de labyrinthes, ainsi qu'un <strong>Mode Histoire</strong> enrichi de fonctionnalités spécifiques et d'une progression narrative. Travail d'équipe intensif sur l'architecture logicielle et l'expérience utilisateur.</p>
+                <p>Développement collaboratif d'un jeu de labyrinthe complet intégrant des algorithmes de génération procédurale. Travail d'équipe intensif sur l'architecture logicielle.</p>
                 <div class="liens-projet-boutons">
                     <a href="https://gitlab.univ-lille.fr/sae302/2025/H2_SAE3.3" target="_blank"><i class="fab fa-gitlab"></i> GITLAB</a>
                     <a href="#" target="_blank"><i class="fas fa-gamepad"></i> JOUER</a>
@@ -205,10 +221,10 @@
             </div>
         </div>
 
-        <div class="element-vitrine-detail">
+        <div class="element-vitrine-detail" data-tags="Linux Debian Bash Solo Binôme" data-title="Administration Linux">
             <div class="galerie-sacadee">
-                <img src="img/admin-linux.jpg" class="image-capture">
-                <img src="img/admin-linux.jpg" class="image-capture">
+                <img src="img/admin-linux.jpg" class="image-capture" loading="lazy">
+                <img src="img/admin-linux.jpg" class="image-capture" loading="lazy">
             </div>
             <div class="corps-projet-detail">
                 <div class="entete-projet">
@@ -243,6 +259,48 @@
         </a>
     </div>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('projectSearch');
+        const tagButtons = document.querySelectorAll('.tag-btn');
+        const projects = document.querySelectorAll('.element-vitrine-detail');
+
+        let currentFilter = 'all';
+        let currentSearch = '';
+
+        function applyFilters() {
+            projects.forEach(project => {
+                const tags = project.getAttribute('data-tags').toLowerCase();
+                const title = project.getAttribute('data-title').toLowerCase();
+                
+                const matchesTag = currentFilter === 'all' || tags.includes(currentFilter.toLowerCase());
+                const matchesSearch = title.includes(currentSearch) || tags.includes(currentSearch);
+
+                if (matchesTag && matchesSearch) {
+                    project.classList.remove('cache');
+                } else {
+                    project.classList.add('cache');
+                }
+            });
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            currentSearch = e.target.value.toLowerCase();
+            applyFilters();
+        });
+
+        tagButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tagButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                currentFilter = button.getAttribute('data-filter');
+                applyFilters();
+            });
+        });
+    });
+</script>
 
 </body>
 </html>

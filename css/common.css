@@ -220,3 +220,39 @@ body {
     75%, 95% { transform: translateX(-300%); }
     100% { transform: translateX(0); }
 }
+
+/* --- RESPONSIVE GLOBAL --- */
+@media (max-width: 768px) {
+    .titre-principal {
+        font-size: 3.5rem; /* Réduction du titre 8rem */
+        text-align: center;
+    }
+
+    .entete-page {
+        padding-top: 100px;
+    }
+
+    .barre-navigation {
+        padding: 15px;
+    }
+
+    .liens-navigation {
+        padding: 8px 10px;
+        display: flex;
+        justify-content: center;
+        width: 95%;
+    }
+
+    .liens-navigation a {
+        font-size: 0.65rem;
+        padding: 5px 8px;
+    }
+
+    .pied-page-minimal {
+        padding: 40px 5%;
+    }
+
+    .liens-externes-footer {
+        gap: 20px;
+    }
+}

@@ -143,3 +143,43 @@
 
 .bouton-vers-tous-projets { font-family: var(--police-titre); font-size: 1rem; color: var(--texte-blanc); text-decoration: none; padding: 15px 40px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); transition: 0.3s; letter-spacing: 2px; }
 .bouton-vers-tous-projets:hover { background: var(--accent-bleu); color: black; border-color: var(--accent-bleu); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2); }
+
+/* --- RESPONSIVE ACCUEIL --- */
+@media (max-width: 768px) {
+    .disposition-titre-hero {
+        flex-direction: column; /* Empile photo et titre */
+        gap: 20px;
+    }
+
+    .cote-profil {
+        width: 180px;
+        height: 140px;
+        justify-content: center;
+    }
+
+    .photo-profil-gauche {
+        height: 180px;
+    }
+
+    .annee-hero {
+        font-size: 2rem;
+    }
+
+    .conteneur-a-propos {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .titre-section-a-propos {
+        font-size: 2.5rem;
+    }
+
+    .bloc-detail-secondaire {
+        grid-template-columns: 1fr; /* Formation et Langues l'un sous l'autre */
+        gap: 20px;
+    }
+
+    .conteneur-projets-statique {
+        grid-template-columns: 1fr; /* 1 seul projet par ligne en vitrine */
+    }
+}
