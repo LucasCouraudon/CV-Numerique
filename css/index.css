@@ -1,4 +1,3 @@
-/* --- HERO SECTION --- */
 .visuel-hero {
     height: 100vh;
     display: flex;
@@ -88,7 +87,6 @@
     text-shadow: 0 0 15px var(--accent-bleu);
 }
 
-/* --- À PROPOS --- */
 .section-a-propos {
     padding: 100px 10%;
     background: rgba(255, 255, 255, 0.02);
@@ -108,11 +106,10 @@
 .titre-section-a-propos { font-family: var(--police-titre); font-size: 4rem; margin-bottom: 20px; }
 .description-a-propos { font-size: 1rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 40px; }
 
-.bloc-detail-secondaire { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.bloc-detail-secondaire { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 15px; }
 .colonne-info h3 { font-family: var(--police-titre); font-size: 1.2rem; margin-bottom: 20px; color: var(--accent-bleu); border-bottom: 1px solid rgba(0, 212, 255, 0.3); padding-bottom: 5px; }
 .colonne-info p { font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin-bottom: 8px; }
 
-/* --- VITRINE D'ACCUEIL --- */
 .section-vitrine { padding: 100px 10%; text-align: center; }
 .titre-recapitulatif { font-family: var(--police-titre); font-size: 3.5rem; margin-bottom: 60px; }
 .conteneur-projets-statique { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 60px; }
@@ -144,10 +141,10 @@
 .bouton-vers-tous-projets { font-family: var(--police-titre); font-size: 1rem; color: var(--texte-blanc); text-decoration: none; padding: 15px 40px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); transition: 0.3s; letter-spacing: 2px; }
 .bouton-vers-tous-projets:hover { background: var(--accent-bleu); color: black; border-color: var(--accent-bleu); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2); }
 
-/* --- RESPONSIVE ACCUEIL --- */
+
 @media (max-width: 768px) {
     .disposition-titre-hero {
-        flex-direction: column; /* Empile photo et titre */
+        flex-direction: column;
         gap: 20px;
     }
 
@@ -175,11 +172,11 @@
     }
 
     .bloc-detail-secondaire {
-        grid-template-columns: 1fr; /* Formation et Langues l'un sous l'autre */
+        grid-template-columns: 1fr; 
         gap: 20px;
     }
 
     .conteneur-projets-statique {
-        grid-template-columns: 1fr; /* 1 seul projet par ligne en vitrine */
+        grid-template-columns: 1fr;
     }
 }

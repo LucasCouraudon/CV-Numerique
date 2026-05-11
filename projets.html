@@ -36,6 +36,7 @@
         <button class="tag-btn active" data-filter="all">TOUS</button>
         <button class="tag-btn" data-filter="Java">JAVA</button>
         <button class="tag-btn" data-filter="Web">WEB / TS</button>
+        <button class="tag-btn" data-filter="SQL">SQL</button>
         <button class="tag-btn" data-filter="Jeux">JEUX</button>
         <button class="tag-btn" data-filter="SAE">SAE</button>
         <button class="tag-btn" data-filter="Linux">LINUX</button>
@@ -164,7 +165,7 @@
                     <span class="badge">HTML5</span>
                     <span class="badge">CSS3</span>
                 </div>
-                <p>Interface web réalisée sans JavaScript, focalisée sur l'architecture sémantique et l'ergonomie moderne. Démonstration de capacité à produire un code visuel propre et solide.</p>
+                <p>Conception d'une plateforme web d'écomobilité réalisée exclusivement en HTML/CSS, sans recours au JavaScript. Focus sur l'architecture sémantique et l'ergonomie moderne pour démontrer une capacité à produire un code visuel propre, solide et structuré.</p>
                 <div class="liens-projet-boutons">
                     <a href="SiteEcoMobilite/connexion.html" target="_blank"><i class="fas fa-external-link-alt"></i> ACCÉDER</a>
                 </div>
@@ -188,7 +189,7 @@
                     <span class="badge">Scrum</span>
                     <span class="badge">Git</span>
                 </div>
-                <p>Réalisation collaborative en équipe appliquant la méthode Scrum. Orchestration des sprints et gestion des user stories pour livrer un produit complet sous contraintes.</p>
+                <p>Développement collaboratif d'un jeu de casino virtuel suivant la méthodologie Agile Scrum. Focus sur l'orchestration des sprints et la rédaction de user stories pour livrer un produit technique complet respectant un cahier des charges strict.</p>
                 <div class="liens-projet-boutons">
                     <a href="https://gitlab.univ-lille.fr/iut-info/p3.01/2025-2026/groupe-9" target="_blank"><i class="fas fa-info-circle"></i> DÉTAILS</a>
                 </div>
@@ -260,6 +261,18 @@
     </div>
 </footer>
 
+<div id="projectModal" class="modal">
+    <div class="modal-content fenetre-terminal">
+        <div class="entete-terminal">
+            <span class="point-terminal" onclick="closeModal()"></span>
+            <span id="modalTitle" class="titre-terminal">details_projet.log</span>
+            <i class="fas fa-times close-icon" onclick="closeModal()"></i>
+        </div>
+        <div class="contenu-terminal" id="modalBody">
+            </div>
+    </div>
+</div>
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const searchInput = document.getElementById('projectSearch');
@@ -300,6 +313,96 @@
             });
         });
     });
+
+    const projectData = {
+    "01": {
+        cadre: "Projet Personnel",
+        role: "Développeur Solo",
+        softSkills: "Autonomie & Curiosité technique",
+        analyse: "Difficulté : Gestion d'un grand nombre d'assets graphiques. Solution : Optimisation du chargement via Vite. Appris : Manipulation avancée du DOM sans framework."
+    },
+    "02": {
+        cadre: "SAÉ S4 - Web Multijoueur",
+        role: "Lead Développeur Temps Réel",
+        softSkills: "Gestion du stress & Travail d'équipe",
+        analyse: "Difficulté : Latence entre les joueurs. Solution : Implémentation d'un système de réconciliation client-serveur. Appris : Architecture Socket.io."
+    },
+    "03": {
+        cadre: "SAÉ S3 - Binôme",
+        role: "Développeur Backend Java EE",
+        softSkills: "Communication technique & Co-développement",
+        analyse: "Difficulté : Sécurisation des routes API. Solution : Mise en place d'un système de Tokens (JWT). Appris : Architecture REST rigoureuse."
+    },
+    "04": {
+        cadre: "Projet S2 - Individuel",
+        role: "Concepteur & Développeur",
+        softSkills: "Rigueur & Organisation",
+        analyse: "Difficulté : Équilibrage des ressources du jeu. Solution : Création d'un modèle mathématique de gestion. Appris : Maîtrise avancée de JavaFX."
+    },
+    "05": {
+        cadre: "Projet S1 - Trinôme",
+        role: "Intégrateur UI/UX",
+        softSkills: "Écoute & Force de proposition",
+        analyse: "Difficulté : Design moderne sans JS. Solution : Utilisation intensive des Flexbox et Grid CSS. Appris : Importance de l'accessibilité sémantique."
+    },
+    "06": {
+        cadre: "SAÉ S3 - Équipe de 6",
+        role: "Scrum Master & Intégrateur Git",
+        softSkills: "Leadership & Méthodologie Agile",
+        analyse: "Difficulté : Coordination des versions de code. Solution : Gestion stricte des branches Git et Sprint Plannings. Appris : Cycle de vie Scrum."
+    },
+    "07": {
+        cadre: "SAÉ S3 - Équipe de 5",
+        role: "Algorithmicien Backend",
+        softSkills: "Résolution de problèmes complexes",
+        analyse: "Difficulté : Génération de labyrinthes parfaits. Solution : Application de l'algorithme de Prim. Appris : Optimisation algorithmique en Java."
+    },
+    "08": {
+        cadre: "SAÉ S1/S2 - Solo",
+        role: "Administrateur Système",
+        softSkills: "Rédaction technique & Précision",
+        analyse: "Difficulté : Documentation pour un néophyte. Solution : Rédaction d'un manuel en anglais technique. Appris : Configuration Debian sécurisée."
+    }
+};
+
+function openModal(id) {
+    const data = projectData[id];
+    const body = document.getElementById('modalBody');
+    const title = document.querySelector(`[data-id="${id}"] h3`).innerText;
+    
+    document.getElementById('modalTitle').innerText = `details_${title.toLowerCase().replace(/ /g, '_')}.log`;
+    
+    body.innerHTML = `
+        <p><span class="invite-commande">></span> <strong>CADRE :</strong> ${data.cadre}</p>
+        <p><span class="invite-commande">></span> <strong>MON RÔLE :</strong> ${data.role}</p>
+        <p><span class="invite-commande">></span> <strong>SOFT SKILLS :</strong> ${data.softSkills}</p>
+        <br>
+        <p><span class="invite-commande">></span> <strong>ANALYSE RÉFLEXIVE :</strong></p>
+        <p style="padding-left: 20px; color: #aaa;">${data.analyse}</p>
+    `;
+    
+    document.getElementById('projectModal').style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById('projectModal').style.display = "none";
+}
+
+// Fermer en cliquant à côté
+window.onclick = function(event) {
+    if (event.target == document.getElementById('projectModal')) closeModal();
+}
+
+// Mise à jour des boutons existants
+document.querySelectorAll('.element-vitrine-detail').forEach(card => {
+    const id = card.querySelector('.numero-projet').innerText;
+    card.setAttribute('data-id', id);
+    const btn = card.querySelector('.liens-projet-boutons a:last-child');
+    btn.removeAttribute('href');
+    btn.style.cursor = "pointer";
+    btn.innerHTML = '<i class="fas fa-plus-circle"></i> DÉTAILS';
+    btn.onclick = () => openModal(id);
+});
 </script>
 
 </body>
