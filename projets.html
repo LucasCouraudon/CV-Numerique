@@ -14,9 +14,9 @@
 <nav class="barre-navigation">
     <div class="liens-navigation">
         <a href="index.html">PROFIL</a>
-        <a href="projets.html">PROJETS</a>
+        <a href="projets.html" class="actif">PROJETS</a>
         <a href="parcours.html">PARCOURS</a>
-        <a href="mailto:couraudonlucas01@gmail.com">CONTACT</a>
+        <a href="mailto:contact@lucascouraudon.fr">CONTACT</a>
         <a href="docs/CV-CouraudonLucas.pdf" download>CV</a>
     </div>
 </nav>
@@ -65,13 +65,14 @@
                 </div>
                 <p>Création d'une carte interactive de la région d'Unys (Pokémon Noir). Focus sur la gestion dynamique du DOM en TypeScript et l'utilisation de Vite pour un environnement de développement rapide et performant.</p>
                 <div class="liens-projet-boutons">
-                    <a href="#" target="_blank"><i class="fab fa-github"></i> CODE</a>
-                    <a href="https://pokemap-unys.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Site</a>
+                    <a href="https://pokemap-unys.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> SITE</a>
+                    <a href="https://gitlab.univ-lille.fr/lucas.couraudon.etu/pokemap" target="_blank"><i class="fab fa-gitlab"></i> CODE</a>
+                    <a onclick="openModal('01')" style="cursor:pointer"><i class="fas fa-plus-circle"></i> DÉTAILS</a>
                 </div>
             </div>
         </div>
 
-        <div class="element-vitrine-detail" data-tags="SAE Multijoueur Web Jeux Temps Réel" data-title="V.I.C.T.O.R">
+        <div class="element-vitrine-detail" data-tags="SAE Multijoueur Web Jeux Temps Réel SQL" data-title="V.I.C.T.O.R">
             <div class="galerie-sacadee">
                 <img src="img/Victor_Shots1.webp" class="image-capture" loading="lazy">
                 <img src="img/Victor_Shots2.webp" class="image-capture" loading="lazy">
@@ -92,12 +93,12 @@
                 <p>Projet de SAE consistant en la création d'un shooter web multijoueur en temps réel. Focus sur la synchronisation des données entre les joueurs, la gestion de la latence et l'implémentation de mécaniques de tir dynamiques.</p>
                 <div class="liens-projet-boutons">
                     <a href="https://gitlab.univ-lille.fr/jsae/2025-2026/projets/groupe-h/equipe-5/equipe5" target="_blank"><i class="fab fa-github"></i> CODE</a>
-                    <a href="#" target="_blank"><i class="fas fa-play"></i> TESTER</a>
+                    <a onclick="openModal('02')" style="cursor:pointer"><i class="fas fa-plus-circle"></i> DÉTAILS</a>
                 </div>
             </div>
         </div>
 
-        <div class="element-vitrine-detail" data-tags="SAE Java PostgreSQL REST Binôme" data-title="Eco-Logica">
+        <div class="element-vitrine-detail" data-tags="SAE Java PostgreSQL REST SQL" data-title="Eco-Logica">
             <div class="galerie-sacadee">
                 <img src="img/Ecologica_Shots1.webp" class="image-capture" loading="lazy">
                 <img src="img/Ecologica_Shots2.webp" class="image-capture" loading="lazy">
@@ -113,17 +114,16 @@
                     <span class="badge">SAE Binôme</span>
                     <span class="badge">Java EE</span>
                     <span class="badge">PostgreSQL</span>
-                    <span class="badge">Bruno (Tests)</span>
                 </div>
                 <p>Développement d'une architecture REST complète en Java EE dédiée à la gestion de centres de tri. Le projet inclut la manipulation de ressources complexes (DAO/DTO), le support multi-format JSON/XML et une sécurisation robuste par token.</p>
                 <div class="liens-projet-boutons">
-                    <a href="https://gitlab.univ-lille.fr/lucas.couraudon.etu/sae-rest" target="_blank"><i class="fab fa-gitlab"></i> GITLAB</a>
-                    <a href="#" target="_blank"><i class="fas fa-vial"></i> SCÉNARIOS TESTS</a>
+                    <a href="https://gitlab.univ-lille.fr/lucas.couraudon.etu/sae-rest" target="_blank"><i class="fab fa-gitlab"></i> CODE</a>
+                    <a onclick="openModal('03')" style="cursor:pointer"><i class="fas fa-plus-circle"></i> DÉTAILS</a>
                 </div>
             </div>
         </div>
 
-        <div class="element-vitrine-detail" data-tags="Java JavaFX Jeux Solo" data-title="Jeu de Gestion en Java">
+        <div class="element-vitrine-detail" data-tags="Java JavaFX Jeux Solo" data-title="Jeu de Gestion">
             <div class="galerie-sacadee">
                 <img src="img/IDE_Shots1.webp" class="image-capture" loading="lazy">
                 <img src="img/IDE_Shots2.webp" class="image-capture" loading="lazy">
@@ -142,13 +142,14 @@
                 </div>
                 <p>Conception d'un jeu de gestion où l'optimisation des ressources est au cœur du gameplay. Défi majeur pour structurer l'interface graphique et implémenter une logique de jeu fiable en autonomie.</p>
                 <div class="liens-projet-boutons">
+                    <a href="https://lordritox.itch.io/ile-des-equilibres" download><i class="fas fa-external-link-alt"></i> SITE</a>
                     <a href="https://gitlab.univ-lille.fr/lucas.couraudon.etu/ile-des-equilibre" target="_blank"><i class="fab fa-gitlab"></i> CODE</a>
-                    <a href="https://github.com/LucasCouraudon/CV-Numerique/releases/download/v2.0/Ile.Des.Equilibres-2.0.msi" download><i class="fas fa-download"></i> .MSI</a>
+                    <a onclick="openModal('04')" style="cursor:pointer"><i class="fas fa-plus-circle"></i> DÉTAILS</a>
                 </div>
             </div>
         </div>
 
-        <div class="element-vitrine-detail" data-tags="HTML5 CSS3 Web Trinôme" data-title="Plateforme Écomobilité">
+        <div class="element-vitrine-detail" data-tags="HTML5 CSS3 Web Trinôme" data-title="Écomobilité">
             <div class="galerie-sacadee">
                 <img src="img/Xiaomi_Shots1.webp" class="image-capture" loading="lazy">
                 <img src="img/Xiaomi_Shots2.webp" class="image-capture" loading="lazy">
@@ -167,12 +168,14 @@
                 </div>
                 <p>Conception d'une plateforme web d'écomobilité réalisée exclusivement en HTML/CSS, sans recours au JavaScript. Focus sur l'architecture sémantique et l'ergonomie moderne pour démontrer une capacité à produire un code visuel propre, solide et structuré.</p>
                 <div class="liens-projet-boutons">
-                    <a href="SiteEcoMobilite/connexion.html" target="_blank"><i class="fas fa-external-link-alt"></i> ACCÉDER</a>
+                    <a href="https://gitlabpages.univ-lille.fr/siteecomobilite-7005f3/index.html" target="_blank"><i class="fas fa-external-link-alt"></i> SITE</a>
+                    <a href="https://gitlab.univ-lille.fr/lucas.couraudon.etu/siteecomobilite" target="_blank"><i class="fab fa-github"></i> CODE</a>
+                    <a onclick="openModal('05')" style="cursor:pointer"><i class="fas fa-plus-circle"></i> DÉTAILS</a>
                 </div>
             </div>
         </div>
 
-        <div class="element-vitrine-detail" data-tags="Scrum Git Équipe Jeux" data-title="Jeu de Casino Agile">
+        <div class="element-vitrine-detail" data-tags="Scrum Git Équipe Jeux" data-title="Casino Agile">
             <div class="galerie-sacadee">
                 <img src="img/GoldenAce_Shots1.webp" class="image-capture" loading="lazy">
                 <img src="img/GoldenAce_Shots2.webp" class="image-capture" loading="lazy">
@@ -191,12 +194,13 @@
                 </div>
                 <p>Développement collaboratif d'un jeu de casino virtuel suivant la méthodologie Agile Scrum. Focus sur l'orchestration des sprints et la rédaction de user stories pour livrer un produit technique complet respectant un cahier des charges strict.</p>
                 <div class="liens-projet-boutons">
-                    <a href="https://gitlab.univ-lille.fr/iut-info/p3.01/2025-2026/groupe-9" target="_blank"><i class="fas fa-info-circle"></i> DÉTAILS</a>
+                    <a href="https://gitlab.univ-lille.fr/iut-info/p3.01/2025-2026/groupe-9" target="_blank"><i class="fab fa-gitlab"></i> CODE</a>
+                    <a onclick="openModal('06')" style="cursor:pointer"><i class="fas fa-plus-circle"></i> DÉTAILS</a>
                 </div>
             </div>
         </div>
 
-        <div class="element-vitrine-detail" data-tags="SAE Java JavaFX Jeux Équipe" data-title="Dédale - Jeu de Labyrinthe">
+        <div class="element-vitrine-detail" data-tags="SAE Java JavaFX Jeux Équipe" data-title="Dédale">
             <div class="galerie-sacadee">
                 <img src="img/Dedale_Shots1.webp" class="image-capture" loading="lazy">
                 <img src="img/Dedale_Shots2.webp" class="image-capture" loading="lazy">
@@ -212,20 +216,21 @@
                     <span class="badge">Équipe de 5</span>
                     <span class="badge">SAE</span>
                     <span class="badge">Java</span>
-                    <span class="badge">JavaFX</span>
                 </div>
                 <p>Développement collaboratif d'un jeu de labyrinthe complet intégrant des algorithmes de génération procédurale. Travail d'équipe intensif sur l'architecture logicielle.</p>
                 <div class="liens-projet-boutons">
-                    <a href="https://gitlab.univ-lille.fr/sae302/2025/H2_SAE3.3" target="_blank"><i class="fab fa-gitlab"></i> GITLAB</a>
-                    <a href="#" target="_blank"><i class="fas fa-gamepad"></i> JOUER</a>
+                    <a href="https://gitlab.univ-lille.fr/sae302/2025/H2_SAE3.3" target="_blank"><i class="fab fa-gitlab"></i> CODE</a>
+                    <a onclick="openModal('07')" style="cursor:pointer"><i class="fas fa-plus-circle"></i> DÉTAILS</a>
                 </div>
             </div>
         </div>
 
-        <div class="element-vitrine-detail" data-tags="Linux Debian Bash Solo Binôme" data-title="Administration Linux">
+        <div class="element-vitrine-detail" data-tags="Linux Debian Bash Solo Binôme" data-title="Admin Linux">
             <div class="galerie-sacadee">
-                <img src="img/admin-linux.jpg" class="image-capture" loading="lazy">
-                <img src="img/admin-linux.jpg" class="image-capture" loading="lazy">
+                <img src="img/AdminSys_Shots1.webp" class="image-capture" loading="lazy">
+                <img src="img/AdminSys_Shots2.webp" class="image-capture" loading="lazy">
+                <img src="img/AdminSys_Shots3.webp" class="image-capture" loading="lazy">
+                <img src="img/AdminSys_Shots4.webp" class="image-capture" loading="lazy">
             </div>
             <div class="corps-projet-detail">
                 <div class="entete-projet">
@@ -237,22 +242,130 @@
                     <span class="badge">Bash</span>
                     <span class="badge">Solo/Binôme</span>
                 </div>
-                <p>Configuration de machine virtuelle Debian et rédaction d'un User Manual technique en anglais. Combinaison d'expertise technique et documentation professionnelle.</p>
+                <p>Configuration de machine virtuelle Debian et rédaction d'un manuel technique en anglais. Combinaison d'expertise technique et documentation professionnelle.</p>
                 <div class="liens-projet-boutons">
-                    <a href="https://gitlab.univ-lille.fr/lucas.couraudon.etu/installationposte" target="_blank"><i class="fab fa-gitlab"></i> MANUEL</a>
+                    <a href="https://gitlab.univ-lille.fr/lucas.couraudon.etu/installationposte" target="_blank"><i class="fab fa-gitlab"></i> CODE</a>
+                    <a onclick="openModal('08')" style="cursor:pointer"><i class="fas fa-plus-circle"></i> DÉTAILS</a>
                 </div>
             </div>
         </div>
 
+        <div class="element-vitrine-detail" data-tags="SAE SQL PostgreSQL Statistiques" data-title="Analyse JO">
+            <div class="galerie-sacadee">
+                <img src="img/JO_Shots1.webp" class="image-capture" loading="lazy">
+                <img src="img/JO_Shots2.webp" class="image-capture" loading="lazy">
+                <img src="img/JO_Shots3.webp" class="image-capture" loading="lazy">
+                <img src="img/JO_Shots4.webp" class="image-capture" loading="lazy">
+            </div>
+            <div class="corps-projet-detail">
+                <div class="entete-projet">
+                    <span class="numero-projet">09</span>
+                    <h3>Analyse des Données Olympiques 🏅</h3>
+                </div>
+                <div class="badges-projet">
+                    <span class="badge">SAE 2.04</span>
+                    <span class="badge">SQL</span>
+                    <span class="badge">PostgreSQL</span>
+                    <span class="badge">Statistiques</span>
+                </div>
+                <p>Exploitation d'une base de données historique sur les Jeux Olympiques. Le projet inclut la normalisation de données réelles (3NF) et la réalisation d'analyses statistiques complexes sur la performance des athlètes et l'évolution de la mixité de 1992 à 2016.</p>
+                <div class="liens-projet-boutons">
+                    <a href="https://gitlab.univ-lille.fr/lucas.couraudon.etu/sae-jo" target="_blank"><i class="fab fa-gitlab"></i> CODE</a>
+                    <a onclick="openModal('09')" style="cursor:pointer"><i class="fas fa-plus-circle"></i> DÉTAILS</a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+
+<div id="projectModal" class="modal">
+    <div class="modal-content fenetre-terminal">
+        <div class="entete-terminal">
+            <span class="point-terminal"></span><span class="point-terminal"></span><span class="point-terminal"></span>
+            <span id="modalTitle" class="titre-terminal">details_projet.log</span>
+            <i class="fas fa-times close-icon" onclick="closeModal()"></i>
+        </div>
+        <div class="contenu-terminal" id="modalBody"></div>
+    </div>
+</div>
+
+<script>
+    // --- LOGIQUE DE FILTRAGE ---
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('projectSearch');
+        const tagButtons = document.querySelectorAll('.tag-btn');
+        const projects = document.querySelectorAll('.element-vitrine-detail');
+
+        function applyFilters() {
+            const currentFilter = document.querySelector('.tag-btn.active').getAttribute('data-filter').toLowerCase();
+            const currentSearch = searchInput.value.toLowerCase();
+
+            projects.forEach(project => {
+                const tags = project.getAttribute('data-tags').toLowerCase();
+                const title = project.getAttribute('data-title').toLowerCase();
+                
+                const matchesTag = currentFilter === 'all' || tags.includes(currentFilter);
+                const matchesSearch = title.includes(currentSearch) || tags.includes(currentSearch);
+
+                project.classList.toggle('cache', !(matchesTag && matchesSearch));
+            });
+        }
+
+        searchInput.addEventListener('input', applyFilters);
+        tagButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tagButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                applyFilters();
+            });
+        });
+    });
+
+    const projectData = {
+        "01": { cadre: "Projet Personnel", role: "Développeur Solo", hardSkills: "TypeScript, Vite, DOM, Netlify", softSkills: "Autonomie & Curiosité", analyse: "Difficulté : Gestion d'assets graphiques. Solution : Optimisation via Vite. Appris : DOM sans framework." },
+        "02": { cadre: "SAÉ S4", role: "Lead Dev", hardSkills: "Socket.io, Node.js, TS, SQL", softSkills: "Gestion du stress & Équipe", analyse: "Difficulté : Latence multijoueur. Solution : Réconciliation client-serveur. Appris : Architecture temps réel." },
+        "03": { cadre: "SAÉ S3", role: "Dev Backend", hardSkills: "Java EE, PostgreSQL, JWT, SQL", softSkills: "Communication technique", analyse: "Difficulté : Sécurisation API. Solution : Mise en place JWT. Appris : Architecture REST rigoureuse." },
+        "04": { cadre: "Projet S2", role: "Solo", hardSkills: "Java, JavaFX, POO", softSkills: "Rigueur & Organisation", analyse: "Difficulté : Équilibrage. Solution : Modèle mathématique. Appris : Maîtrise JavaFX." },
+        "05": { cadre: "Projet S1", role: "UI/UX", hardSkills: "HTML5, CSS3 Grid/Flex", softSkills: "Écoute & Force de proposition", analyse: "Difficulté : Design moderne sans JS. Solution : Flexbox/Grid CSS. Appris : Accessibilité sémantique." },
+        "06": { cadre: "SAÉ S3", role: "Scrum Master", hardSkills: "Agile, GitFlow, Jira", softSkills: "Leadership & Agilité", analyse: "Difficulté : Coordination de code. Solution : GitFlow strict. Appris : Cycle Scrum." },
+        "07": { cadre: "SAÉ S3", role: "Backend", hardSkills: "Algorithmie, Java", softSkills: "Résolution de problèmes", analyse: "Difficulté : Labyrinthes parfaits. Solution : Algorithme de Prim. Appris : Optimisation backend." },
+        "08": { cadre: "SAÉ S1/S2", role: "Admin Sys", hardSkills: "Debian, Bash, Anglais", softSkills: "Rédaction & Précision", analyse: "Difficulté : Documentation complexe. Solution : Manuel technique illustré. Appris : Sécurité système." },
+        "09": { cadre: "SAÉ S2 - Exploitation de base de données", role: "Binôme", hardSkills: "SQL, PostgreSQL, Normalisation (3NF), Statistiques, Analyse de données", softSkills: "Esprit critique, Rigueur mathématique, Collaboration", analyse: "Difficulté : Passage d'un import de données brutes à un modèle relationnel normalisé sans perte d'information. Solution : Ventilation rigoureuse des tables et requêtes SQL à portée statistique. Appris : Analyse critique de données réelles et visualisation de l'évolution de la mixité aux JO." 
+}
+    };
+
+    function openModal(id) {
+        const data = projectData[id];
+        const body = document.getElementById('modalBody');
+        document.getElementById('modalTitle').innerText = `details_projet_${id}.log`;
+        
+        body.innerHTML = `
+            <p><span class="invite-commande">></span> <strong>CADRE :</strong> ${data.cadre}</p>
+            <p><span class="invite-commande">></span> <strong>MON RÔLE :</strong> ${data.role}</p>
+            <p><span class="invite-commande">></span> <strong>HARD SKILLS :</strong> ${data.hardSkills}</p>
+            <p><span class="invite-commande">></span> <strong>SOFT SKILLS :</strong> ${data.softSkills}</p>
+            <br>
+            <p><span class="invite-commande">></span> <strong>ANALYSE RÉFLEXIVE :</strong></p>
+            <p style="padding-left: 20px; color: #aaa;">${data.analyse}</p>
+        `;
+        document.getElementById('projectModal').style.display = "flex";
+    }
+
+    function closeModal() {
+        document.getElementById('projectModal').style.display = "none";
+    }
+
+    window.onclick = (event) => {
+        if (event.target == document.getElementById('projectModal')) closeModal();
+    }
+</script>
 
 <footer class="pied-page-minimal">
     <div class="liens-externes-footer">
         <a href="https://www.linkedin.com/in/lucas-couraudon-b217b035a/" target="_blank">
             <i class="fab fa-linkedin"></i> LINKEDIN
         </a>
-        <a href="mailto:couraudonlucas01@gmail.com">
+        <a href="mailto:contact@lucascouraudon.fr">
             <i class="fas fa-envelope"></i> EMAIL
         </a>
         <a href="docs/CV-CouraudonLucas.pdf" download>
@@ -260,150 +373,6 @@
         </a>
     </div>
 </footer>
-
-<div id="projectModal" class="modal">
-    <div class="modal-content fenetre-terminal">
-        <div class="entete-terminal">
-            <span class="point-terminal" onclick="closeModal()"></span>
-            <span id="modalTitle" class="titre-terminal">details_projet.log</span>
-            <i class="fas fa-times close-icon" onclick="closeModal()"></i>
-        </div>
-        <div class="contenu-terminal" id="modalBody">
-            </div>
-    </div>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const searchInput = document.getElementById('projectSearch');
-        const tagButtons = document.querySelectorAll('.tag-btn');
-        const projects = document.querySelectorAll('.element-vitrine-detail');
-
-        let currentFilter = 'all';
-        let currentSearch = '';
-
-        function applyFilters() {
-            projects.forEach(project => {
-                const tags = project.getAttribute('data-tags').toLowerCase();
-                const title = project.getAttribute('data-title').toLowerCase();
-                
-                const matchesTag = currentFilter === 'all' || tags.includes(currentFilter.toLowerCase());
-                const matchesSearch = title.includes(currentSearch) || tags.includes(currentSearch);
-
-                if (matchesTag && matchesSearch) {
-                    project.classList.remove('cache');
-                } else {
-                    project.classList.add('cache');
-                }
-            });
-        }
-
-        searchInput.addEventListener('input', (e) => {
-            currentSearch = e.target.value.toLowerCase();
-            applyFilters();
-        });
-
-        tagButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                tagButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-
-                currentFilter = button.getAttribute('data-filter');
-                applyFilters();
-            });
-        });
-    });
-
-    const projectData = {
-    "01": {
-        cadre: "Projet Personnel",
-        role: "Développeur Solo",
-        softSkills: "Autonomie & Curiosité technique",
-        analyse: "Difficulté : Gestion d'un grand nombre d'assets graphiques. Solution : Optimisation du chargement via Vite. Appris : Manipulation avancée du DOM sans framework."
-    },
-    "02": {
-        cadre: "SAÉ S4 - Web Multijoueur",
-        role: "Lead Développeur Temps Réel",
-        softSkills: "Gestion du stress & Travail d'équipe",
-        analyse: "Difficulté : Latence entre les joueurs. Solution : Implémentation d'un système de réconciliation client-serveur. Appris : Architecture Socket.io."
-    },
-    "03": {
-        cadre: "SAÉ S3 - Binôme",
-        role: "Développeur Backend Java EE",
-        softSkills: "Communication technique & Co-développement",
-        analyse: "Difficulté : Sécurisation des routes API. Solution : Mise en place d'un système de Tokens (JWT). Appris : Architecture REST rigoureuse."
-    },
-    "04": {
-        cadre: "Projet S2 - Individuel",
-        role: "Concepteur & Développeur",
-        softSkills: "Rigueur & Organisation",
-        analyse: "Difficulté : Équilibrage des ressources du jeu. Solution : Création d'un modèle mathématique de gestion. Appris : Maîtrise avancée de JavaFX."
-    },
-    "05": {
-        cadre: "Projet S1 - Trinôme",
-        role: "Intégrateur UI/UX",
-        softSkills: "Écoute & Force de proposition",
-        analyse: "Difficulté : Design moderne sans JS. Solution : Utilisation intensive des Flexbox et Grid CSS. Appris : Importance de l'accessibilité sémantique."
-    },
-    "06": {
-        cadre: "SAÉ S3 - Équipe de 6",
-        role: "Scrum Master & Intégrateur Git",
-        softSkills: "Leadership & Méthodologie Agile",
-        analyse: "Difficulté : Coordination des versions de code. Solution : Gestion stricte des branches Git et Sprint Plannings. Appris : Cycle de vie Scrum."
-    },
-    "07": {
-        cadre: "SAÉ S3 - Équipe de 5",
-        role: "Algorithmicien Backend",
-        softSkills: "Résolution de problèmes complexes",
-        analyse: "Difficulté : Génération de labyrinthes parfaits. Solution : Application de l'algorithme de Prim. Appris : Optimisation algorithmique en Java."
-    },
-    "08": {
-        cadre: "SAÉ S1/S2 - Solo",
-        role: "Administrateur Système",
-        softSkills: "Rédaction technique & Précision",
-        analyse: "Difficulté : Documentation pour un néophyte. Solution : Rédaction d'un manuel en anglais technique. Appris : Configuration Debian sécurisée."
-    }
-};
-
-function openModal(id) {
-    const data = projectData[id];
-    const body = document.getElementById('modalBody');
-    const title = document.querySelector(`[data-id="${id}"] h3`).innerText;
-    
-    document.getElementById('modalTitle').innerText = `details_${title.toLowerCase().replace(/ /g, '_')}.log`;
-    
-    body.innerHTML = `
-        <p><span class="invite-commande">></span> <strong>CADRE :</strong> ${data.cadre}</p>
-        <p><span class="invite-commande">></span> <strong>MON RÔLE :</strong> ${data.role}</p>
-        <p><span class="invite-commande">></span> <strong>SOFT SKILLS :</strong> ${data.softSkills}</p>
-        <br>
-        <p><span class="invite-commande">></span> <strong>ANALYSE RÉFLEXIVE :</strong></p>
-        <p style="padding-left: 20px; color: #aaa;">${data.analyse}</p>
-    `;
-    
-    document.getElementById('projectModal').style.display = "flex";
-}
-
-function closeModal() {
-    document.getElementById('projectModal').style.display = "none";
-}
-
-// Fermer en cliquant à côté
-window.onclick = function(event) {
-    if (event.target == document.getElementById('projectModal')) closeModal();
-}
-
-// Mise à jour des boutons existants
-document.querySelectorAll('.element-vitrine-detail').forEach(card => {
-    const id = card.querySelector('.numero-projet').innerText;
-    card.setAttribute('data-id', id);
-    const btn = card.querySelector('.liens-projet-boutons a:last-child');
-    btn.removeAttribute('href');
-    btn.style.cursor = "pointer";
-    btn.innerHTML = '<i class="fas fa-plus-circle"></i> DÉTAILS';
-    btn.onclick = () => openModal(id);
-});
-</script>
 
 </body>
 </html>
