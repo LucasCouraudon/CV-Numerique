@@ -1,45 +1,129 @@
 .visuel-hero {
+    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 80px;
-    background: radial-gradient(circle at 35% 45%, rgba(0, 212, 255, 0.2) 0%, transparent 55%);
+    padding-top: 60px;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 50% 30%, #0d111a 0%, #06080d 100%);
 }
 
+.visuel-hero::before {
+    content: '';
+    position: absolute;
+    inset: -20%;
+    pointer-events: none;
+    z-index: 1;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.1  0 0 0 0 0.08  0 0 0 0 0.18  0 0 0 0.7 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+        radial-gradient(circle at 25% 20%, rgba(30, 18, 48, 0.95) 0%, transparent 45%),
+        radial-gradient(circle at 75% 25%, rgba(22, 12, 38, 0.9) 0%, transparent 50%),
+        radial-gradient(circle at 50% 10%, rgba(38, 22, 58, 0.85) 0%, transparent 40%);
+    background-blend-mode: overlay, normal, normal, normal;
+    filter: blur(6px);
+    opacity: 0.85;
+    animation: deplacementNuages 25s ease-in-out infinite alternate;
+}
+
+.visuel-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    filter: blur(14px);
+    opacity: 0;
+    animation: eclairDansNuages 8s infinite;
+}
+
+.disposition-titre-hero,
+.sous-titre-hero,
+.menu-jeu {
+    position: relative;
+    z-index: 2;
+}
+
+
+@keyframes deplacementNuages {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.08) translate(-15px, -10px); }
+}
+
+@keyframes eclairDansNuages {
+    0%, 100% { opacity: 0; }
+    2% {
+        opacity: 0.85;
+        background: radial-gradient(circle 380px at 25% 20%, rgba(168, 85, 247, 0.9) 0%, rgba(139, 92, 246, 0.25) 50%, transparent 80%);
+    }
+    3% { opacity: 0.2; }
+    4% { opacity: 1; }
+    7% { opacity: 0; }
+
+    28% { opacity: 0; }
+    30% {
+        opacity: 0.9;
+        background: radial-gradient(circle 420px at 75% 25%, rgba(192, 132, 252, 0.85) 0%, rgba(139, 92, 246, 0.2) 55%, transparent 80%);
+    }
+    31% { opacity: 0.25; }
+    32% { opacity: 0.95; }
+    35% { opacity: 0; }
+
+    60% { opacity: 0; }
+    62% {
+        opacity: 0.8;
+        background: radial-gradient(circle 350px at 50% 12%, rgba(168, 85, 247, 0.8) 0%, rgba(139, 92, 246, 0.2) 50%, transparent 80%);
+    }
+    63% { opacity: 0.15; }
+    64% { opacity: 0.9; }
+    67% { opacity: 0; }
+}
 .disposition-titre-hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    margin-bottom: 30px;
+    gap: 50px;
+    margin-bottom: 25px;
 }
 
+/* Zone bloc pour contenir le carré + personnage à gauche du titre */
 .cote-profil {
     position: relative;
-    width: 250px;
-    height: 180px;
-    display: flex;
-    align-items: flex-end;
+    width: 200px;
+    height: 220px;
+    flex-shrink: 0;
 }
 
+/* Le carré sombre translucide */
 .forme-rouge {
     position: absolute;
-    left: 20px;
+    left: 0;
     bottom: 0;
-    width: 160px;
-    height: 160px;
-    background-color: var(--accent-rouge);
-    border-radius: 20px 80px 80px 20px;
+    width: 200px;
+    height: 200px;
+    background: rgba(13, 17, 26, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 20px;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.6),
+        0 0 20px rgba(139, 92, 246, 0.2);
     z-index: 1;
 }
 
+/* Le personnage centré sur le carré et posé sur le bord supérieur */
 .photo-profil-gauche {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 35px; /* Ajuste l'assise pour caler les fesses sur le haut du carré */
+    height: 280px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.85));
     z-index: 2;
-    height: 230px;
-    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.6));
 }
 
 .cote-titre {
@@ -50,16 +134,17 @@
 
 .annee-hero {
     font-family: var(--police-titre);
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 3.5rem;
+    color: var(--c2-neutre-secondaire);
+    font-size: 3rem;
+    opacity: 0.4;
 }
 
 .sous-titre-hero {
     font-family: var(--police-technique);
-    color: var(--accent-bleu);
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    margin-bottom: 50px;
+    color: var(--c3-accent-violet);
+    font-size: 0.88rem;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -74,23 +159,22 @@
     font-family: var(--police-titre);
     font-size: 1.6rem;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--c2-neutre-secondaire);
     text-decoration: none;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     display: block;
     margin: 10px 0;
 }
 
 .menu-jeu li a:hover {
-    color: var(--texte-blanc);
+    color: var(--c3-accent-violet);
     letter-spacing: 2px;
-    text-shadow: 0 0 15px var(--accent-bleu);
 }
 
 .section-a-propos {
     padding: 100px 10%;
-    background: rgba(255, 255, 255, 0.02);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--c2-bordure);
+    background: rgba(255, 255, 255, 0.01);
 }
 
 .conteneur-a-propos {
@@ -103,80 +187,103 @@
 
 .visuel-technique-a-propos { flex: 1; display: flex; justify-content: center; }
 .texte-a-propos { flex: 1.5; }
-.titre-section-a-propos { font-family: var(--police-titre); font-size: 4rem; margin-bottom: 20px; }
-.description-a-propos { font-size: 1rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 40px; }
+.titre-section-a-propos { font-family: var(--police-titre); font-size: 3.8rem; margin-bottom: 20px; color: var(--c2-neutre-texte); }
+.description-a-propos { font-size: 0.98rem; color: var(--c2-neutre-secondaire); margin-bottom: 35px; }
+.description-a-propos strong { color: var(--c2-neutre-texte); }
 
-.bloc-detail-secondaire { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 15px; }
-.colonne-info h3 { font-family: var(--police-titre); font-size: 1.2rem; margin-bottom: 20px; color: var(--accent-bleu); border-bottom: 1px solid rgba(0, 212, 255, 0.3); padding-bottom: 5px; }
-.colonne-info p { font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin-bottom: 8px; }
+.bloc-detail-secondaire { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 25px; }
+.colonne-info h3 { 
+    font-family: var(--police-titre); 
+    font-size: 1.2rem; 
+    margin-bottom: 15px; 
+    color: var(--c2-neutre-texte); 
+    border-bottom: 1px solid var(--c2-bordure); 
+    padding-bottom: 5px; 
+}
+.colonne-info p { font-size: 0.88rem; color: var(--c2-neutre-secondaire); margin-bottom: 8px; }
 
 .section-vitrine { padding: 100px 10%; text-align: center; }
-.titre-recapitulatif { font-family: var(--police-titre); font-size: 3.5rem; margin-bottom: 60px; }
-.conteneur-projets-statique { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 60px; }
+.titre-recapitulatif { font-family: var(--police-titre); font-size: 3.5rem; margin-bottom: 50px; }
+.conteneur-projets-statique { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin-bottom: 50px; }
 
 .element-vitrine { 
     position: relative; 
     aspect-ratio: 16/10; 
-    border-radius: 12px; 
+    border-radius: 8px; 
     overflow: hidden; 
-    background: #111; 
+    background: #111520; 
     cursor: pointer; 
-    border: 1px solid rgba(255,255,255,0.1); 
+    border: 1px solid var(--c2-bordure); 
+    transition: border-color 0.3s ease;
 }
 
-.element-vitrine:hover .galerie-sacadee { 
-    animation: transitionImages 5s infinite; /* Un peu plus lent pour le teaser */
+.element-vitrine:hover {
+    border-color: var(--c3-accent-violet);
 }
 
+.element-vitrine:hover .galerie-sacadee { animation: transitionImages 6s infinite; }
 .element-vitrine:hover .image-capture { opacity: 1; }
 
-.infos-survol { position: absolute; bottom: -100%; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.9) 30%, transparent); display: flex; flex-direction: column; justify-content: flex-end; padding: 30px; transition: 0.4s ease-out; }
+.infos-survol { 
+    position: absolute; 
+    bottom: -100%; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: linear-gradient(to top, rgba(10, 13, 20, 0.95) 40%, transparent); 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
+    padding: 25px; 
+    transition: 0.35s ease-out; 
+}
 .element-vitrine:hover .infos-survol { bottom: 0; }
 .entete-survol { display: flex; align-items: center; gap: 15px; margin-bottom: 10px; }
-.entete-survol h3 { font-family: var(--police-titre); font-size: 1.5rem; text-align: left; }
-.badges-survol { display: flex; gap: 10px; margin-bottom: 20px; }
-.badges-survol span { font-family: var(--police-technique); font-size: 0.6rem; padding: 3px 8px; border: 1px solid var(--accent-bleu); color: var(--accent-bleu); border-radius: 4px; }
-.bouton-details { align-self: flex-start; font-family: var(--police-titre); font-size: 0.8rem; color: black; background: var(--accent-bleu); padding: 8px 20px; text-decoration: none; border-radius: 4px; }
+.entete-survol h3 { font-family: var(--police-titre); font-size: 1.4rem; text-align: left; }
+.badges-survol { display: flex; gap: 8px; margin-bottom: 15px; }
+.badges-survol span { 
+    font-family: var(--police-technique); 
+    font-size: 0.65rem; 
+    padding: 3px 8px; 
+    border: 1px solid var(--c2-bordure); 
+    color: var(--c2-neutre-secondaire); 
+    border-radius: 4px; 
+    background: rgba(255, 255, 255, 0.05);
+}
+.bouton-details { 
+    align-self: flex-start; 
+    font-family: var(--police-titre); 
+    font-size: 0.85rem; 
+    color: #ffffff; 
+    background: var(--c3-accent-violet); 
+    padding: 8px 20px; 
+    text-decoration: none; 
+    border-radius: 4px;
+}
 
-.bouton-vers-tous-projets { font-family: var(--police-titre); font-size: 1rem; color: var(--texte-blanc); text-decoration: none; padding: 15px 40px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); transition: 0.3s; letter-spacing: 2px; }
-.bouton-vers-tous-projets:hover { background: var(--accent-bleu); color: black; border-color: var(--accent-bleu); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2); }
+.bouton-vers-tous-projets { 
+    font-family: var(--police-titre); 
+    font-size: 1rem; 
+    color: var(--c2-neutre-texte); 
+    text-decoration: none; 
+    padding: 14px 36px; 
+    border: 1px solid var(--c2-bordure); 
+    background: var(--c2-fond-carte); 
+    border-radius: 6px;
+    transition: all 0.3s ease; 
+    letter-spacing: 1.5px; 
+}
 
+.bouton-vers-tous-projets:hover { 
+    background: var(--c3-accent-violet); 
+    color: #ffffff; 
+    border-color: var(--c3-accent-violet); 
+}
 
 @media (max-width: 768px) {
-    .disposition-titre-hero {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .cote-profil {
-        width: 180px;
-        height: 140px;
-        justify-content: center;
-    }
-
-    .photo-profil-gauche {
-        height: 180px;
-    }
-
-    .annee-hero {
-        font-size: 2rem;
-    }
-
-    .conteneur-a-propos {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .titre-section-a-propos {
-        font-size: 2.5rem;
-    }
-
-    .bloc-detail-secondaire {
-        grid-template-columns: 1fr; 
-        gap: 20px;
-    }
-
-    .conteneur-projets-statique {
-        grid-template-columns: 1fr;
-    }
+    .disposition-titre-hero { flex-direction: column; gap: 20px; }
+    .conteneur-a-propos { flex-direction: column; }
+    .titre-section-a-propos { font-size: 2.5rem; }
+    .bloc-detail-secondaire { grid-template-columns: 1fr; }
+    .conteneur-projets-statique { grid-template-columns: 1fr; }
 }

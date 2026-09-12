@@ -1,8 +1,13 @@
 :root {
-    --fond-noir: #050505;
-    --accent-bleu: #00d4ff;
-    --accent-rouge: #8c0022;
-    --texte-blanc: #ffffff;
+    /* PALETTE DES 3 COULEURS */
+    --c1-fond: #0a0d14;                      /* 1. Fond Ardoise Sombre */
+    --c2-neutre-texte: #f3f4f6;              /* 2. Blanc / Gris clair pour structure & texte */
+    --c2-neutre-secondaire: #9ca3af;         /* 2b. Gris moyen */
+    --c2-fond-carte: rgba(255, 255, 255, 0.03);
+    --c2-bordure: rgba(255, 255, 255, 0.1);
+    
+    --c3-accent-violet: #8b5cf6;             /* 3. L'UNIQUE Violet (Accentuation) */
+    
     --police-titre: 'Anton', sans-serif;
     --police-corps: 'Inter', sans-serif;
     --police-technique: 'JetBrains Mono', monospace;
@@ -15,152 +20,170 @@
 }
 
 body {
-    background-color: var(--fond-noir);
-    color: var(--texte-blanc);
+    background-color: var(--c1-fond);
+    color: var(--c2-neutre-texte);
     font-family: var(--police-corps);
-    background-image: radial-gradient(circle at 50% 50%, #001a2e 0%, #050505 100%);
-    background-attachment: fixed;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* --- NAVIGATION --- */
+/* --- NAVIGATION GLASSMORPHISM NEUTRE --- */
 .barre-navigation {
     position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 30px;
+    padding: 25px;
     z-index: 1000;
 }
 
 .liens-navigation {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 10px 20px;
+    background: rgba(18, 22, 32, 0.8);
+    padding: 8px 20px;
     border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    border: 1px solid var(--c2-bordure);
+    backdrop-filter: blur(12px);
 }
 
 .liens-navigation a {
     text-transform: uppercase;
     font-family: var(--police-titre);
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    padding: 5px 15px;
-    color: var(--texte-blanc);
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    padding: 8px 18px;
+    color: var(--c2-neutre-secondaire);
     text-decoration: none;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     display: inline-block;
 }
 
-.liens-navigation a:hover, .liens-navigation a.actif {
-    background: var(--accent-bleu);
-    color: black;
+.liens-navigation a:hover {
+    color: var(--c2-neutre-texte);
+}
+
+.liens-navigation a.actif {
+    background: var(--c3-accent-violet);
+    color: #ffffff;
     border-radius: 20px;
 }
 
-/* --- HEADERS --- */
+/* --- HEADERS SOBRES --- */
 .entete-page {
-    padding-top: 150px;
+    padding-top: 140px;
     text-align: center;
 }
 
 .titre-principal {
     font-family: var(--police-titre);
-    font-size: 8rem;
+    font-size: 7.5rem;
     line-height: 1;
     margin: 0;
+    color: var(--c2-neutre-texte);
+    letter-spacing: 2px;
 }
 
 .sous-titre-technique {
     font-family: var(--police-technique);
-    color: var(--accent-bleu);
-    font-size: 0.8rem;
+    color: var(--c3-accent-violet);
+    font-size: 0.85rem;
     letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
-/* --- COMPOSANTS SHARED (Terminal & Skills) --- */
+/* --- TERMINAL STYLE DARK SLATE --- */
 .fenetre-terminal {
     width: 100%;
-    background: #000;
-    border: 1px solid var(--accent-bleu);
+    background: #111520;
+    border: 1px solid var(--c2-bordure);
     border-radius: 8px;
     font-family: var(--police-technique);
     overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .entete-terminal {
-    background: #1a1a1a;
-    padding: 10px;
+    background: #181d2b;
+    padding: 10px 16px;
     display: flex;
     align-items: center;
     gap: 8px;
+    border-bottom: 1px solid var(--c2-bordure);
 }
 
 .point-terminal {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background: #333;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .titre-terminal {
-    font-size: 0.7rem;
-    color: #666;
+    font-size: 0.75rem;
+    color: var(--c2-neutre-secondaire);
     margin-left: 10px;
 }
 
 .contenu-terminal {
-    padding: 20px;
-    font-size: 0.85rem;
-    line-height: 2;
+    padding: 24px;
+    font-size: 0.88rem;
+    line-height: 1.9;
+    color: var(--c2-neutre-texte);
 }
 
 .invite-commande {
-    color: var(--accent-bleu);
+    color: var(--c3-accent-violet);
     font-weight: bold;
 }
 
+/* --- DÉTAILS & COMPETENCES --- */
 .bloc-detail h3 {
     font-family: var(--police-titre);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 20px;
-    color: var(--accent-bleu);
-    border-bottom: 1px solid rgba(0, 212, 255, 0.3);
-    padding-bottom: 5px;
+    color: var(--c2-neutre-texte);
+    border-bottom: 1px solid var(--c2-bordure);
+    padding-bottom: 8px;
+    letter-spacing: 1px;
 }
 
 .liste-logiciels {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 15px;
+    gap: 12px;
 }
 
 .item-logiciel {
     font-family: var(--police-technique);
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     display: flex;
     align-items: center;
     gap: 12px;
-    color: rgba(255, 255, 255, 0.8);
-    background: rgba(255, 255, 255, 0.03);
-    padding: 8px;
-    border-radius: 4px;
+    color: var(--c2-neutre-secondaire);
+    background: var(--c2-fond-carte);
+    border: 1px solid var(--c2-bordure);
+    padding: 10px 14px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+.item-logiciel:hover {
+    border-color: var(--c3-accent-violet);
+    color: var(--c2-neutre-texte);
 }
 
 .item-logiciel i {
-    color: var(--accent-bleu);
-    font-size: 1.2rem;
+    color: var(--c3-accent-violet);
+    font-size: 1.1rem;
     width: 25px;
     text-align: center;
 }
 
-/* --- FOOTER --- */
+/* --- FOOTER MINIMALISTE --- */
 .pied-page-minimal {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 60px 10%;
+    border-top: 1px solid var(--c2-bordure);
+    background: var(--c1-fond);
+    padding: 50px 10%;
     display: flex;
     justify-content: center;
 }
@@ -174,28 +197,26 @@ body {
 }
 
 .liens-externes-footer a {
-    color: var(--texte-blanc);
+    color: var(--c2-neutre-secondaire);
     text-decoration: none;
     font-family: var(--police-titre);
     font-size: 1rem;
     display: flex;
     align-items: center;
-    gap: 12px;
-    opacity: 0.5;
-    transition: 0.3s;
+    gap: 10px;
+    transition: all 0.3s ease;
 }
 
 .liens-externes-footer a i {
-    color: var(--accent-bleu);
+    color: var(--c3-accent-violet);
 }
 
 .liens-externes-footer a:hover {
-    opacity: 1;
-    transform: translateY(-3px);
-    text-shadow: 0 0 10px var(--accent-bleu);
+    color: var(--c2-neutre-texte);
+    transform: translateY(-2px);
 }
 
-/* --- LOGIQUE DE GALERIE (CORRECTION) --- */
+/* --- GALERIE --- */
 .galerie-sacadee {
     display: flex;
     width: 100%;
@@ -205,12 +226,10 @@ body {
 
 .image-capture {
     width: 100%;
-    flex: 0 0 100%; /* FORCE CHAQUE IMAGE À PRENDRE 100% DU CADRE */
+    flex: 0 0 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center; /* CENTRE L'IMAGE */
     opacity: 0.8;
-    transition: 0.5s;
 }
 
 @keyframes transitionImages {
@@ -221,38 +240,9 @@ body {
     100% { transform: translateX(0); }
 }
 
-/* --- RESPONSIVE GLOBAL --- */
 @media (max-width: 768px) {
-    .titre-principal {
-        font-size: 3.5rem; /* Réduction du titre 8rem */
-        text-align: center;
-    }
-
-    .entete-page {
-        padding-top: 100px;
-    }
-
-    .barre-navigation {
-        padding: 15px;
-    }
-
-    .liens-navigation {
-        padding: 8px 10px;
-        display: flex;
-        justify-content: center;
-        width: 95%;
-    }
-
-    .liens-navigation a {
-        font-size: 0.65rem;
-        padding: 5px 8px;
-    }
-
-    .pied-page-minimal {
-        padding: 40px 5%;
-    }
-
-    .liens-externes-footer {
-        gap: 20px;
-    }
+    .titre-principal { font-size: 3.8rem; }
+    .entete-page { padding-top: 110px; }
+    .barre-navigation { padding: 15px; }
+    .liens-navigation a { font-size: 0.72rem; padding: 6px 10px; }
 }

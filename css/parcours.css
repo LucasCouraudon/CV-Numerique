@@ -1,194 +1,136 @@
 .section-contenu-parcours {
-    padding: 80px 10%;
-    max-width: 1350px;
+    padding: 70px 10%;
+    max-width: 1300px;
     margin: 0 auto;
-    min-height: 100vh; /* Supprime le vide noir en bas en remplissant l'écran */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 50px;
 }
 
 .grille-parcours {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 35px;
 }
 
 .grille-pleine-largeur { grid-column: 1 / -1; }
 
-/* --- Bloc Formation (Gauche) --- */
 .item-parcours {
-    margin-bottom: 50px; /* Aère les blocs formation */
+    margin-bottom: 35px;
 }
 
 .item-parcours h3 {
     font-family: var(--police-titre);
-    font-size: 1.4rem;
-    color: var(--accent-bleu);
-    margin-bottom: 10px;
+    font-size: 1.35rem;
+    color: var(--c2-neutre-texte);
+    margin-bottom: 6px;
 }
 
 .institution {
     font-family: var(--police-technique);
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 12px;
+    font-size: 0.82rem;
+    color: var(--c2-neutre-secondaire);
+    margin-bottom: 10px;
 }
 
 .description-longue {
-    line-height: 1.8; /* Supprime l'effet condensé */
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--c2-neutre-secondaire);
+    font-size: 0.92rem;
 }
 
-/* --- Bloc Savoir-être (Droite) --- */
-.liste-logiciels {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+.description-longue strong {
+    color: var(--c2-neutre-texte);
 }
 
 .langue-box {
-    margin-top: 60px; /* Écarte le texte du bas des badges icônes */
-    padding: 30px;
-    background: rgba(0, 212, 255, 0.05);
-    border-left: 2px solid var(--accent-bleu);
+    margin-top: 35px;
+    padding: 20px;
+    background: var(--c2-fond-carte);
+    border-left: 3px solid var(--c3-accent-violet);
+    border-radius: 0 6px 6px 0;
 }
 
 .detail-cours-samedi {
-    margin: 20px 0;
+    margin: 12px 0;
     display: block;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
-/* --- Grille Expériences --- */
 .carte-projet {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-left: 4px solid var(--accent-bleu);
-    padding: 45px;
+    background: var(--c2-fond-carte);
+    border: 1px solid var(--c2-bordure);
+    border-left: 4px solid var(--c3-accent-violet);
+    padding: 40px;
+    border-radius: 8px;
 }
 
 .grille-experiences {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 
 .detail-exp {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 8px;
+    background: #111520;
+    border: 1px solid var(--c2-bordure);
+    padding: 25px;
+    border-radius: 6px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
+    transition: border-color 0.25s ease;
+}
+
+.detail-exp:hover {
+    border-color: var(--c3-accent-violet);
 }
 
 .highlight-exp {
-    border-color: rgba(0, 212, 255, 0.3);
-    background: rgba(0, 212, 255, 0.04);
+    border-color: rgba(139, 92, 246, 0.4);
 }
 
 .tag-job {
     font-family: var(--police-technique);
-    font-size: 0.65rem;
-    color: #ffd700;
-    margin-bottom: 5px;
+    font-size: 0.75rem;
+    color: var(--c3-accent-violet);
+    margin-bottom: 4px;
 }
 
 .detail-exp h4 {
     font-family: var(--police-titre);
     font-size: 1.3rem;
+    color: var(--c2-neutre-texte);
 }
 
 .meta-exp {
     font-family: var(--police-technique);
-    color: var(--accent-bleu);
+    color: var(--c2-neutre-secondaire);
     font-size: 0.8rem;
 }
 
 .liste-points { list-style: none; }
 .liste-points li { 
-    font-size: 0.9rem; 
-    color: rgba(255, 255, 255, 0.7); 
-    margin-bottom: 12px; 
-    line-height: 1.6;
+    font-size: 0.88rem; 
+    color: var(--c2-neutre-secondaire); 
+    margin-bottom: 10px; 
 }
-.liste-points li i { color: var(--accent-bleu); margin-right: 10px; }
+.liste-points li i { color: var(--c3-accent-violet); margin-right: 8px; }
 
 .appris-text {
     margin-top: auto;
-    font-size: 0.75rem;
-    color: var(--accent-bleu);
-    background: rgba(0, 212, 255, 0.08);
-    padding: 10px 15px;
+    font-size: 0.78rem;
+    color: var(--c2-neutre-secondaire);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px 12px;
     border-radius: 4px;
     font-style: italic;
-    border-left: 2px solid var(--accent-bleu);
+    border-left: 2px solid var(--c3-accent-violet);
 }
 
-@media (max-width: 900px) {
-    .grille-parcours { grid-template-columns: 1fr; }
-}
-/* --- CORRECTIF RESPONSIVE DÉDIÉ PARCOURS --- */
 @media (max-width: 950px) {
-    .section-contenu-parcours {
-        padding: 40px 5%; /* Réduction des marges latérales pour gagner de la place */
-        gap: 30px;
-    }
-
-    .grille-parcours {
-        grid-template-columns: 1fr; /* Passage en une seule colonne obligatoire */
-        gap: 30px;
-    }
-
-    .bloc-parcours {
-        padding: 20px; /* Moins de padding interne dans les blocs */
-    }
-
-    /* Ajustement du terminal sur mobile */
-    .contenu-terminal {
-        padding: 15px;
-        font-size: 0.75rem; /* Texte légèrement plus petit pour éviter les retours à la ligne */
-    }
-
-    /* Force les expériences professionnelles à s'empiler proprement */
-    .grille-experiences {
-        grid-template-columns: 1fr; 
-        gap: 20px;
-    }
-
-    .carte-projet {
-        padding: 20px; /* Réduction du padding du bloc bleu */
-    }
-
-    .detail-exp {
-        padding: 20px;
-    }
-
-    /* Ajustement des badges et icônes */
-    .liste-logiciels {
-        grid-template-columns: 1fr 1fr; /* 2 colonnes de badges au lieu d'une grille large */
-        gap: 10px;
-    }
-
-    .langue-box {
-        margin-top: 30px;
-        padding: 20px;
-    }
-
-    .item-parcours h3 {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .liste-logiciels {
-        grid-template-columns: 1fr; /* 1 seule colonne de badges sur très petit écran */
-    }
-    
-    .detail-exp h4 {
-        font-size: 1.1rem;
-    }
+    .section-contenu-parcours { padding: 40px 5%; gap: 30px; }
+    .grille-parcours { grid-template-columns: 1fr; }
+    .grille-experiences { grid-template-columns: 1fr; }
 }
